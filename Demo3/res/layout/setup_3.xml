@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  
+  <TextView android:id="@+id/text"
+    android:text="您可以选择对应的图片"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:layout_marginTop="20dip"
+	android:textSize="20sp"
+	android:textColor="?android:attr/textColorPrimary" />
+  <Button android:id="@+id/pick_image"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="选择图片"
+    android:layout_below="@id/text"
+    />
+  <TextView android:id="@+id/image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/pick_image"
+    />
+    
+  <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="54dip" 
+    android:background="@android:drawable/bottom_bar"
+    android:layout_alignParentBottom="true">
+    <Button android:id="@+id/prev" 
+	  android:text="前一步"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content"
+	  android:drawableRight="@drawable/ic_btn_next"
+	  android:minWidth="150sp"				
+	  android:layout_alignParentLeft="true"
+	  android:layout_centerVertical="true" />
+	<Button android:id="@+id/finish" 
+	  android:text="完成"
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content"
+	  android:drawableRight="@drawable/ic_btn_next"
+	  android:minWidth="150sp"				
+	  android:layout_alignParentRight="true"
+	  android:layout_centerVertical="true" />
+  </RelativeLayout>  
+ 
+</RelativeLayout>
