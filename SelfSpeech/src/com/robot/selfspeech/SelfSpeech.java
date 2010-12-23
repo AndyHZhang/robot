@@ -80,6 +80,7 @@ public class SelfSpeech extends Activity {
 			mActionIndex = 0;
 			mCommandList = mCommandLists.get(new Random().nextInt(mCommandLists
 					.size()));
+			//mCommandList = mCommandLists.get(0);
 			mHandler.postDelayed(mStart, COMMAND_GROUP_INTERVAL);
 		}
 	}
@@ -111,7 +112,7 @@ public class SelfSpeech extends Activity {
 		commands.add(new RobotCommand("小优你都会做什么", R.raw.type1_02,
 				UActionCode.DO_NOTHING, 0));
 		commands.add(new RobotCommand("你没吹牛吧", R.raw.type1_03,
-				UActionCode.DANCE_TYPE1, 10 * 1000));
+				UActionCode.DANCE_TYPE1, 15 * 1000));
 		commands.add(new RobotCommand("小优跳的不错", R.raw.type1_04,
 				UActionCode.DO_NOTHING, 0));
 		commands.add(new RobotCommand("小优唱首歌", R.raw.type1_05,
@@ -179,6 +180,7 @@ public class SelfSpeech extends Activity {
 		case KeyEvent.KEYCODE_SOFT_LEFT:
 			if (mState == State.IDLE) {
 				mSPL.startScan();
+				mHandler.removeCallbacks(mStart);
 			}
 			break;
 		case KeyEvent.KEYCODE_SOFT_RIGHT:

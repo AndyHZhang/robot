@@ -97,10 +97,11 @@ public class SPL {
     }
 	
 	private void initEngine() {
-    	mVREngine = new JNI();
-        
-        mVREngine.msrInit();
-        mVocHandle = mVREngine.msrCreateVocabulary(256);
-        mVREngine.msrOpen();
+		mVREngine = new JNI();
+    	
+    	mVREngine.msrInitWithPenalty(0);
+		mVREngine.msrSetLogLevel(0);
+		mVocHandle = mVREngine.msrCreateVocabulary(4);
+		mVREngine.msrOpen();
     }
 }
