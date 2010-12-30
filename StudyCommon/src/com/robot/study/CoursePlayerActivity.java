@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -42,7 +43,7 @@ public abstract class CoursePlayerActivity extends Activity {
 				mMediaPlayer.release();
 				if (sound != Const.SOUND_INVALID) {
 					mMediaPlayer = MediaPlayer.create(CoursePlayerActivity.this, sound);
-					//mMediaPlayer.start();
+					mMediaPlayer.start();
 				}
 				
 				nextSlide(SLIDE_NORMAL_INTERVAL);
@@ -84,6 +85,23 @@ public abstract class CoursePlayerActivity extends Activity {
 		// TODO we need to test whether music can stop when press home key
 		mHandler.removeCallbacks(mChangeSlide);
 		mMediaPlayer.release();
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_0:
+		case KeyEvent.KEYCODE_VOLUME_UP:
+		case KeyEvent.KEYCODE_VOLUME_DOWN:
+			mHandler.removeCallbacks(mChangeSlide);
+			mMediaPlayer.release();
+			
+			mIndex = -1;
+			//mString = 
+			
+			break;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 	private void nextSlide(int interval) {

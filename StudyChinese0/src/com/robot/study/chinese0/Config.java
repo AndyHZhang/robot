@@ -29,54 +29,241 @@ public class Config {
 		if (mProgresses == null) {
 			mProgresses = new ArrayList<Progress>();
 			
-			for (int i = 0; i < 21; i++) {
-				Progress p = new Progress(R.drawable.icon);
-				
-				Course c1 = new Course(R.drawable.icon, Config.CourseData01);
-				Course c2 = new Course(R.drawable.icon, Config.CourseData02);
-				Course c3 = new Course(R.drawable.icon, Config.CourseData03);
-				p.addCourse(c1).addCourse(c2).addCourse(c3);
-				mProgresses.add(p);
-			}
+			Progress p;
+			Course c1 = new Course(R.drawable.icon, Config.CourseData1_1);
+			Course c2 = new Course(R.drawable.icon, Config.CourseData2_1);
+			Course c3 = new Course(R.drawable.icon, Config.CourseData3_1);
+			Course c4 = new Course(R.drawable.icon, Config.CourseData4_1);
+			Course c5 = new Course(R.drawable.icon, Config.CourseData5_1);
+			Course c6 = new Course(R.drawable.icon, Config.CourseData6_1);
+			Course c7 = new Course(R.drawable.icon, Config.CourseData7_1);
+			Course c8 = new Course(R.drawable.icon, Config.CourseData8_1);
+			Course c9 = new Course(R.drawable.icon, Config.CourseData9_1);
+			Course c10 = new Course(R.drawable.icon, Config.CourseData10_1);
+			Course c11= new Course(R.drawable.icon, Config.CourseData11_1);
+			Course c12 = new Course(R.drawable.icon, Config.CourseData12_1);
+			Course c13 = new Course(R.drawable.icon, Config.CourseData13_1);
+			Course c14 = new Course(R.drawable.icon, Config.CourseData14_1);
+			Course c15 = new Course(R.drawable.icon, Config.CourseData15_1);
+			Course c16 = new Course(R.drawable.icon, Config.CourseData16_1);
+			Course c17 = new Course(R.drawable.icon, Config.CourseData17_1);
+			Course c18 = new Course(R.drawable.icon, Config.CourseData18_1);
+			Course c19 = new Course(R.drawable.icon, Config.CourseData19_1);
+			
+			// Day 1
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c1).addCourse(c2).addCourse(c3);
+			mProgresses.add(p);
+			// Day 2
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c1).addCourse(c2).addCourse(c3);
+			mProgresses.add(p);
+			// Day 3
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c1).addCourse(c2).addCourse(c3);
+			mProgresses.add(p);
+			// Day 4
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c4).addCourse(c5).addCourse(c6);
+			mProgresses.add(p);
+			// Day 5
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c4).addCourse(c5).addCourse(c6);
+			mProgresses.add(p);
+			// Day 6
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c4).addCourse(c5).addCourse(c6);
+			mProgresses.add(p);
+			// Day 7
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c7).addCourse(c8).addCourse(c9);
+			mProgresses.add(p);
+			// Day 8
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c7).addCourse(c8).addCourse(c9);
+			mProgresses.add(p);
+			// Day 9
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c7).addCourse(c8).addCourse(c9);
+			mProgresses.add(p);
+			// Day 10
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c10).addCourse(c11).addCourse(c12);
+			mProgresses.add(p);
+			// Day 11
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c10).addCourse(c11).addCourse(c12);
+			mProgresses.add(p);
+			// Day 12
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c10).addCourse(c11).addCourse(c12);
+			mProgresses.add(p);
+			// Day 13
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c13).addCourse(c14).addCourse(c15);
+			mProgresses.add(p);
+			// Day 14
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c13).addCourse(c14).addCourse(c15);
+			mProgresses.add(p);
+			// Day 15
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c13).addCourse(c14).addCourse(c15);
+			mProgresses.add(p);
+			// Day 16
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c16).addCourse(c17).addCourse(c18);
+			mProgresses.add(p);
+			// Day 17
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c16).addCourse(c17).addCourse(c18);
+			mProgresses.add(p);
+			// Day 18
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c16).addCourse(c17).addCourse(c18);
+			mProgresses.add(p);
+			// Day 19
+			p = new Progress(R.drawable.icon);
+			p.addCourse(c19).addCourse(c19).addCourse(c19);
+			mProgresses.add(p);
+			
 		}
 		
 		return mProgresses;
 	}
 	
-	public final static String[] CourseData01 = { 
-		"ÃÅ","´°","Êé","µÆ","¾µ",
-		Const.COURSE_BREAK,
-		"ÒÂ","¿ã","Ð¬","Íà","Ã±",
-		Const.COURSE_BREAK,
-		"¹ø","Íë","¿ê","É×","ÅÌ",
-		Const.COURSE_BREAK,
-		"ÖÓ","Ç½","×À","ÒÎ","»­",
-		Const.COURSE_BREAK,
+	public final static String[] CourseData1_1 = { 
+		"ÃÅ","´°","Êé","µÆ","¾µ",Const.COURSE_BREAK,
+		"ÒÂ","¿ã","Ð¬","Íà","Ã±",Const.COURSE_BREAK,
+		"¹ø","Íë","¿ê","É×","ÅÌ",Const.COURSE_BREAK,
+		"ÖÓ","Ç½","×À","ÒÎ","»­",Const.COURSE_BREAK,
 		"»¨","Äñ","³æ","Óã","Ïº"
 	};
-	
-	public final static String[] CourseData02 = { 
-		"´°","Êé","µÆ","¾µ","Ã¨",
-		Const.COURSE_BREAK,
-		"¿ã","Ð¬","Íà","Ã±","¹·",
-		Const.COURSE_BREAK,
-		"Íë","¿ê","É×","ÅÌ","¼¦",
-		Const.COURSE_BREAK,
-		"Ç½","×À","ÒÎ","»­","Ñ¼",
-		Const.COURSE_BREAK,
+	public final static String[] CourseData2_1 = { 
+		"´°","Êé","µÆ","¾µ","Ã¨",Const.COURSE_BREAK,
+		"¿ã","Ð¬","Íà","Ã±","¹·",Const.COURSE_BREAK,
+		"Íë","¿ê","É×","ÅÌ","¼¦",Const.COURSE_BREAK,
+		"Ç½","×À","ÒÎ","»­","Ñ¼",Const.COURSE_BREAK,
 		"Äñ","³æ","Óã","Ïº","ÍÃ"
 	};
-	
-	public final static String[] CourseData03 = { 
-		"Êé","µÆ","¾µ","Ã¨","Àº",
-		Const.COURSE_BREAK,
-		"Ð¬","Íà","Ã±","¹·","µÊ",
-		Const.COURSE_BREAK,
-		"¿ê","É×","ÅÌ","¼¦","Æ¿",
-		Const.COURSE_BREAK,
-		"×À","ÒÎ","»­","Ñ¼","±­",
-		Const.COURSE_BREAK,
-		"³æ","Óã","Ïº","ÍÃ","µú",
+	public final static String[] CourseData3_1 = { 
+		"Êé","µÆ","¾µ","Ã¨","Àº",Const.COURSE_BREAK,
+		"Ð¬","Íà","Ã±","¹·","µÊ",Const.COURSE_BREAK,
+		"¿ê","É×","ÅÌ","¼¦","Æ¿",Const.COURSE_BREAK,
+		"×À","ÒÎ","»­","Ñ¼","±­",Const.COURSE_BREAK,
+		"³æ","Óã","Ïº","ÍÃ","µú"
+	};
+	public final static String[] CourseData4_1 = { 
+		"µÆ","¾µ","Ã¨","Àº","µ¶",Const.COURSE_BREAK,
+		"Íà","Ã±","¹·","µÊ","Ë®",Const.COURSE_BREAK,
+		"É×","ÅÌ","¼¦","Æ¿","±í",Const.COURSE_BREAK,
+		"ÒÎ","»­","Ñ¼","±­","ÉÈ",Const.COURSE_BREAK,
+		"Óã","Ïº","ÍÃ","µú","±Ê"
+	};
+	public final static String[] CourseData5_1 = { 
+		"¾µ","Ã¨","Àº","µ¶","Ö½",Const.COURSE_BREAK,
+		"Ã±","¹·","µÊ","Ë®","±¨",Const.COURSE_BREAK,
+		"ÅÌ","¼¦","Æ¿","±í","Í·",Const.COURSE_BREAK,
+		"»­","Ñ¼","±­","ÉÈ","ÑÛ",Const.COURSE_BREAK,
+		"Ïº","ÍÃ","µú","±Ê","±Ç"
+	};
+	public final static String[] CourseData6_1 = { 
+		"Ã¨","Àº","µ¶","Ö½","Á³",Const.COURSE_BREAK,
+		"¹·","µÊ","Ë®","±¨","ÊÖ",Const.COURSE_BREAK,
+		"¼¦","Æ¿","±í","Í·","½Å",Const.COURSE_BREAK,
+		"Ñ¼","±­","ÉÈ","ÑÛ","×ì",Const.COURSE_BREAK,
+		"ÍÃ","µú","±Ê","±Ç","¶ú"
+	};
+	public final static String[] CourseData7_1 = { 
+		"Àº","µ¶","Ö½","Á³","Å£",Const.COURSE_BREAK,
+		"µÊ","Ë®","±¨","ÊÖ","Ñò",Const.COURSE_BREAK,
+		"Æ¿","±í","Í·","½Å","Öí",Const.COURSE_BREAK,
+		"±­","ÉÈ","ÑÛ","×ì","¹ê",Const.COURSE_BREAK,
+		"µú","±Ê","±Ç","¶ú","Ê÷"
+	};
+	public final static String[] CourseData8_1 = { 
+		"µ¶","Ö½","Á³","Å£","²Ý",Const.COURSE_BREAK,
+		"Ë®","±¨","ÊÖ","Ñò","ÌÇ",Const.COURSE_BREAK,
+		"±í","Í·","½Å","Öí","¹Ï",Const.COURSE_BREAK,
+		"ÉÈ","ÑÛ","×ì","¹ê","±ý",Const.COURSE_BREAK,
+		"±Ê","±Ç","¶ú","Ê÷","×ß"
+	};
+	public final static String[] CourseData9_1 = { 
+		"Ö½","Á³","Å£","²Ý","ÅÀ",Const.COURSE_BREAK,
+		"±¨","ÊÖ","Ñò","ÌÇ","Ìø",Const.COURSE_BREAK,
+		"Í·","½Å","Öí","¹Ï","ÅÜ",Const.COURSE_BREAK,
+		"ÑÛ","×ì","¹ê","±ý","±§",Const.COURSE_BREAK,
+		"±Ç","¶ú","Ê÷","×ß","¶×"
+	};
+	public final static String[] CourseData10_1 = { 
+		"Á³","Å£","²Ý","ÅÀ","Õ¾",Const.COURSE_BREAK,
+		"ÊÖ","Ñò","ÌÇ","Ìø","Ò©",Const.COURSE_BREAK,
+		"½Å","Öí","¹Ï","ÅÜ","Ìì",Const.COURSE_BREAK,
+		"×ì","¹ê","±ý","±§","µØ",Const.COURSE_BREAK,
+		"¶ú","Ê÷","×ß","¶×","É½"
+	};
+	public final static String[] CourseData11_1 = { 
+		"Å£","²Ý","ÅÀ","Õ¾","·ç",Const.COURSE_BREAK,
+		"Ñò","ÌÇ","Ìø","Ò©","Óê",Const.COURSE_BREAK,
+		"Öí","¹Ï","ÅÜ","Ìì","ºþ",Const.COURSE_BREAK,
+		"¹ê","±ý","±§","µØ","ºÓ",Const.COURSE_BREAK,
+		"Ê÷","×ß","¶×","É½","ºÐ"
+	};
+	public final static String[] CourseData12_1 = { 
+		"²Ý","ÅÀ","Õ¾","·ç","»ð",Const.COURSE_BREAK,
+		"ÌÇ","Ìø","Ò©","Óê","¹Þ",Const.COURSE_BREAK,
+		"¹Ï","ÅÜ","Ìì","ºþ","Ã×",Const.COURSE_BREAK,
+		"±ý","±§","µØ","ºÓ","²è",Const.COURSE_BREAK,
+		"×ß","¶×","É½","ºÐ","Ìð"
+	};
+	public final static String[] CourseData13_1 = { 
+		"ÅÀ","Õ¾","·ç","»ð","¿à",Const.COURSE_BREAK,
+		"Ìø","Ò©","Óê","¹Þ","Ëá",Const.COURSE_BREAK,
+		"ÅÜ","Ìì","ºþ","Ã×","À±",Const.COURSE_BREAK,
+		"±§","µØ","ºÓ","²è","ºì",Const.COURSE_BREAK,
+		"¶×","É½","ºÐ","Ìð","»Æ"
+	};
+	public final static String[] CourseData14_1 = { 
+		"Õ¾","·ç","»ð","¿à","ÂÌ",Const.COURSE_BREAK,
+		"Ò©","Óê","¹Þ","Ëá","ºÚ",Const.COURSE_BREAK,
+		"Ìì","ºþ","Ã×","À±","°×",Const.COURSE_BREAK,
+		"µØ","ºÓ","²è","ºì","¿Þ",Const.COURSE_BREAK,
+		"É½","ºÐ","Ìð","»Æ","Ð¦"
+	};
+	public final static String[] CourseData15_1 = { 
+		"·ç","»ð","¿à","ÂÌ","ÃÅ",Const.COURSE_BREAK,
+		"Óê","¹Þ","Ëá","ºÚ","´°",Const.COURSE_BREAK,
+		"ºþ","Ã×","À±","°×","Êé",Const.COURSE_BREAK,
+		"ºÓ","²è","ºì","¿Þ","µÆ",Const.COURSE_BREAK,
+		"ºÐ","Ìð","»Æ","Ð¦","¾µ"
+	};
+	public final static String[] CourseData16_1 = { 
+		"»ð","¿à","ÂÌ","ÃÅ","ÒÂ",Const.COURSE_BREAK,
+		"¹Þ","Ëá","ºÚ","´°","¿ã",Const.COURSE_BREAK,
+		"Ã×","À±","°×","Êé","Ð¬",Const.COURSE_BREAK,
+		"²è","ºì","¿Þ","µÆ","Íà",Const.COURSE_BREAK,
+		"Ìð","»Æ","Ð¦","¾µ","Ã±"
+	};
+	public final static String[] CourseData17_1 = { 
+		"¿à","ÂÌ","ÃÅ","ÒÂ","¹ø",Const.COURSE_BREAK,
+		"Ëá","ºÚ","´°","¿ã","Íë",Const.COURSE_BREAK,
+		"À±","°×","Êé","Ð¬","¿ê",Const.COURSE_BREAK,
+		"ºì","¿Þ","µÆ","Íà","É×",Const.COURSE_BREAK,
+		"»Æ","Ð¦","¾µ","Ã±","ÅÌ"
+	};
+	public final static String[] CourseData18_1 = { 
+		"ÂÌ","ÃÅ","ÒÂ","¹ø","ÖÓ",Const.COURSE_BREAK,
+		"ºÚ","´°","¿ã","Íë","Ç½",Const.COURSE_BREAK,
+		"°×","Êé","Ð¬","¿ê","×À",Const.COURSE_BREAK,
+		"¿Þ","µÆ","Íà","É×","ÒÎ",Const.COURSE_BREAK,
+		"Ð¦","¾µ","Ã±","ÅÌ","»­"
+	};
+	public final static String[] CourseData19_1 = { 
+		"ÃÅ","ÒÂ","¹ø","ÖÓ","»¨",Const.COURSE_BREAK,
+		"´°","¿ã","Íë","Ç½","Äñ",Const.COURSE_BREAK,
+		"Êé","Ð¬","¿ê","×À","³æ",Const.COURSE_BREAK,
+		"µÆ","Íà","É×","ÒÎ","Óã",Const.COURSE_BREAK,
+		"¾µ","Ã±","ÅÌ","»­","Ïº"
 	};
 	
 	public static final HashMap<String, Integer> mSoundMap = new HashMap<String, Integer>() {
