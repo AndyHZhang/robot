@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+	<RelativeLayout android:id="@+id/view1"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TextView android:id="@+id/texttext"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="tab2"/>
+        <RadioGroup android:id="@+id/ability"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@id/texttext"
+        	android:orientation="vertical">
+        	<RadioButton android:text="Yes" android:id="@+id/yes" />
+        	<RadioButton android:text="No" android:id="@+id/no" />
+    	</RadioGroup>
+    	<RelativeLayout 
+    		android:layout_width="fill_parent"
+    		android:layout_height="54dip" 
+    		android:background="@android:drawable/bottom_bar"
+    		android:layout_alignParentBottom="true">
+    		<Button android:id="@+id/prev" 
+		  		android:text="前一步"
+	  			android:layout_height="wrap_content" 
+	  			android:layout_width="wrap_content"
+	  			android:drawableRight="@drawable/ic_btn_next"
+	  			android:minWidth="150sp"				
+	  			android:layout_alignParentLeft="true"
+	  			android:layout_centerVertical="true" />
+			<Button android:id="@+id/next" 
+	  			android:text="下一步"
+	  			android:layout_height="wrap_content" 
+	  			android:layout_width="wrap_content"
+	  			android:drawableRight="@drawable/ic_btn_next"
+	  			android:minWidth="150sp"				
+	  			android:layout_alignParentRight="true"
+	  			android:layout_centerVertical="true" />
+  		</RelativeLayout>
+  	</RelativeLayout>
+
+    <TextView android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="tab2"/>
+
+    <TextView android:id="@+id/view3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="tab3"/>
+        
+    <TextView android:id="@+id/view4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="tab4"/>
+        
+    <TextView android:id="@+id/view5"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="tab5"/>
+
+</FrameLayout>
