@@ -101,7 +101,7 @@ public class SPL {
     	
     	mVREngine.msrInitWithPenalty(0);
 		mVREngine.msrSetLogLevel(0);
-		mVocHandle = mVREngine.msrCreateVocabulary(4);
+		mVocHandle = mVREngine.msrCreateVocabulary(100);
 		mVREngine.msrOpen();
     }
 }
