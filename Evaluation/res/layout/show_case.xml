@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:id="@+id/title"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	android:text="测试题目"/>
+    <EditText android:id="@+id/title_content"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_below="@id/title"
+       	android:editable="false"
+       	android:cursorVisible="false"
+       	android:focusable="false"
+       	android:text="测试题目内容"/>
+    <TextView android:id="@+id/method"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_below="@id/title_content"
+       	android:text="测试方法"/>
+    <EditText android:id="@+id/method_content"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_below="@id/method"
+       	android:editable="false"
+       	android:cursorVisible="false"
+       	android:focusable="false"
+       	android:text="测试方法内容"/>
+    <TextView android:id="@+id/standard"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_below="@id/method_content"
+       	android:text="测试标准"/>
+    <EditText android:id="@+id/standard_content"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_below="@id/standard"
+       	android:editable="false"
+       	android:cursorVisible="false"
+       	android:focusable="false"
+       	android:text="测试标准内容"/>
+    <RelativeLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="54dip" 
+    	android:background="@android:drawable/bottom_bar"
+    	android:layout_alignParentBottom="true">
+    	<Button android:id="@+id/yes_btn" 
+		 	android:text="Yes"
+	  		android:layout_height="wrap_content" 
+	  		android:layout_width="wrap_content"
+	  		android:minWidth="150sp"				
+	  		android:layout_alignParentLeft="true"
+	  		android:layout_centerVertical="true" />
+		<Button android:id="@+id/no_btn" 
+	  		android:text="No"
+	  		android:layout_height="wrap_content" 
+	  		android:layout_width="wrap_content"
+	  		android:minWidth="150sp"				
+	  		android:layout_alignParentRight="true"
+	  		android:layout_centerVertical="true" />
+  	</RelativeLayout>
+</RelativeLayout>
