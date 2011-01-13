@@ -3,13 +3,13 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/main"
+    android:background="@drawable/selector_background"
     >
     
     <GridView android:id="@+id/grid"
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
-    	android:layout_marginTop="58px"
+    	android:layout_marginTop="20px"
     	android:horizontalSpacing="15px"
 	    android:verticalSpacing="28px"
 	    android:listSelector="@drawable/selector"

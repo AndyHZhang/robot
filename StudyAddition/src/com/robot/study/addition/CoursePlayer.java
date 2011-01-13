@@ -9,7 +9,11 @@ public class CoursePlayer extends CoursePlayerActivity {
 	}
 	
 	public int getTextId() {
-		return Config.TEXT_WIDGET_ID;
+		return 0;
+	}
+	
+	public int getImageId() {
+		return Config.IMAGE_WIDGET_ID;
 	}
 	
 	public int getNextCourseResId() {
@@ -18,5 +22,9 @@ public class CoursePlayer extends CoursePlayerActivity {
 	
 	public int getSound(String s) {
 		return Config.mSoundMap.get(s);
+	}
+	
+	public int getImage(String s) {
+		return Config.mImageMap.get(s);
 	}
 }

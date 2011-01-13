@@ -10,10 +10,13 @@ import com.robot.study.Progress;
 public class Config {
 	
 	public final static int WELCOME_LAYOUT_ID = R.layout.welcome;
+	public final static int SETTINGS_LAYOUT_ID = R.layout.settings;
 	public final static int PROGRESS_SELECTOR_LAYOUT_ID = R.layout.progress_selector;
 	public final static int COURSE_SELECTOR_LAYOUT_ID = R.layout.course_selector;
 	public final static int COURSE_PLAYER_LAYOUT_ID = R.layout.courses;
 	public final static int GRID_WIDGET_ID = R.id.grid;
+	public final static int SEEKBAR_WIDGET_ID = R.id.seek;
+	public final static int GALLERY_WIDGET_ID = R.id.gallery;
 	public final static int TEXT_WIDGET_ID = R.id.text;
 	public final static int STRING_NEXT_COURSE = R.string.next_course;
 	public final static int PROGRESS_COLUMN = 7;
@@ -30,101 +33,101 @@ public class Config {
 			mProgresses = new ArrayList<Progress>();
 			
 			Progress p;
-			Course c1 = new Course(R.drawable.icon, Config.CourseData1_1);
-			Course c2 = new Course(R.drawable.icon, Config.CourseData2_1);
-			Course c3 = new Course(R.drawable.icon, Config.CourseData3_1);
-			Course c4 = new Course(R.drawable.icon, Config.CourseData4_1);
-			Course c5 = new Course(R.drawable.icon, Config.CourseData5_1);
-			Course c6 = new Course(R.drawable.icon, Config.CourseData6_1);
-			Course c7 = new Course(R.drawable.icon, Config.CourseData7_1);
-			Course c8 = new Course(R.drawable.icon, Config.CourseData8_1);
-			Course c9 = new Course(R.drawable.icon, Config.CourseData9_1);
-			Course c10 = new Course(R.drawable.icon, Config.CourseData10_1);
-			Course c11= new Course(R.drawable.icon, Config.CourseData11_1);
-			Course c12 = new Course(R.drawable.icon, Config.CourseData12_1);
-			Course c13 = new Course(R.drawable.icon, Config.CourseData13_1);
-			Course c14 = new Course(R.drawable.icon, Config.CourseData14_1);
-			Course c15 = new Course(R.drawable.icon, Config.CourseData15_1);
-			Course c16 = new Course(R.drawable.icon, Config.CourseData16_1);
-			Course c17 = new Course(R.drawable.icon, Config.CourseData17_1);
-			Course c18 = new Course(R.drawable.icon, Config.CourseData18_1);
-			Course c19 = new Course(R.drawable.icon, Config.CourseData19_1);
+			Course c1 = new Course(R.drawable.course01, Config.CourseData1_1);
+			Course c2 = new Course(R.drawable.course02, Config.CourseData2_1);
+			Course c3 = new Course(R.drawable.course03, Config.CourseData3_1);
+			Course c4 = new Course(R.drawable.course01, Config.CourseData4_1);
+			Course c5 = new Course(R.drawable.course02, Config.CourseData5_1);
+			Course c6 = new Course(R.drawable.course03, Config.CourseData6_1);
+			Course c7 = new Course(R.drawable.course01, Config.CourseData7_1);
+			Course c8 = new Course(R.drawable.course02, Config.CourseData8_1);
+			Course c9 = new Course(R.drawable.course03, Config.CourseData9_1);
+			Course c10 = new Course(R.drawable.course01, Config.CourseData10_1);
+			Course c11 = new Course(R.drawable.course02, Config.CourseData11_1);
+			Course c12 = new Course(R.drawable.course03, Config.CourseData12_1);
+			Course c13 = new Course(R.drawable.course01, Config.CourseData13_1);
+			Course c14 = new Course(R.drawable.course02, Config.CourseData14_1);
+			Course c15 = new Course(R.drawable.course03, Config.CourseData15_1);
+			Course c16 = new Course(R.drawable.course01, Config.CourseData16_1);
+			Course c17 = new Course(R.drawable.course02, Config.CourseData17_1);
+			Course c18 = new Course(R.drawable.course03, Config.CourseData18_1);
+			Course c19 = new Course(R.drawable.course01, Config.CourseData19_1);
 			
 			// Day 1
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day01);
 			p.addCourse(c1).addCourse(c2).addCourse(c3);
 			mProgresses.add(p);
 			// Day 2
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day02);
 			p.addCourse(c1).addCourse(c2).addCourse(c3);
 			mProgresses.add(p);
 			// Day 3
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day03);
 			p.addCourse(c1).addCourse(c2).addCourse(c3);
 			mProgresses.add(p);
 			// Day 4
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day04);
 			p.addCourse(c4).addCourse(c5).addCourse(c6);
 			mProgresses.add(p);
 			// Day 5
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day05);
 			p.addCourse(c4).addCourse(c5).addCourse(c6);
 			mProgresses.add(p);
 			// Day 6
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day06);
 			p.addCourse(c4).addCourse(c5).addCourse(c6);
 			mProgresses.add(p);
 			// Day 7
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day07);
 			p.addCourse(c7).addCourse(c8).addCourse(c9);
 			mProgresses.add(p);
 			// Day 8
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day08);
 			p.addCourse(c7).addCourse(c8).addCourse(c9);
 			mProgresses.add(p);
 			// Day 9
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day09);
 			p.addCourse(c7).addCourse(c8).addCourse(c9);
 			mProgresses.add(p);
 			// Day 10
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day10);
 			p.addCourse(c10).addCourse(c11).addCourse(c12);
 			mProgresses.add(p);
 			// Day 11
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day11);
 			p.addCourse(c10).addCourse(c11).addCourse(c12);
 			mProgresses.add(p);
 			// Day 12
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day12);
 			p.addCourse(c10).addCourse(c11).addCourse(c12);
 			mProgresses.add(p);
 			// Day 13
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day13);
 			p.addCourse(c13).addCourse(c14).addCourse(c15);
 			mProgresses.add(p);
 			// Day 14
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day14);
 			p.addCourse(c13).addCourse(c14).addCourse(c15);
 			mProgresses.add(p);
 			// Day 15
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day15);
 			p.addCourse(c13).addCourse(c14).addCourse(c15);
 			mProgresses.add(p);
 			// Day 16
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day16);
 			p.addCourse(c16).addCourse(c17).addCourse(c18);
 			mProgresses.add(p);
 			// Day 17
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day17);
 			p.addCourse(c16).addCourse(c17).addCourse(c18);
 			mProgresses.add(p);
 			// Day 18
-			p = new Progress(R.drawable.icon);
+			p = new Progress(R.drawable.day18);
 			p.addCourse(c16).addCourse(c17).addCourse(c18);
 			mProgresses.add(p);
 			// Day 19
-			p = new Progress(R.drawable.icon);
-			p.addCourse(c19).addCourse(c19).addCourse(c19);
+			p = new Progress(R.drawable.day19);
+			p.addCourse(c19).addCourse(c2).addCourse(c3);
 			mProgresses.add(p);
 			
 		}
@@ -268,37 +271,37 @@ public class Config {
 	
 	public static final HashMap<String, Integer> mSoundMap = new HashMap<String, Integer>() {
 		{
-		put("ÃÅ", R.raw.sound056);
-		put("´°", R.raw.sound057);
-		put("Êé", R.raw.sound058);
-		put("µÆ", R.raw.sound059);
-		put("¾µ", R.raw.sound060);
-		put("ÒÂ", R.raw.sound061);
-		put("¿ã", R.raw.sound062);
-		put("Ð¬", R.raw.sound063);
-		put("Íà", R.raw.sound064);
-		put("Ã±", R.raw.sound065);
-		put("¹ø", R.raw.sound066);
-		put("Íë", R.raw.sound067);
-		put("¿ê", R.raw.sound068);
-		put("É×", R.raw.sound069);
-		put("ÅÌ", R.raw.sound070);
+		put("ÃÅ", Const.SOUND_INVALID);
+		put("´°", Const.SOUND_INVALID);
+		put("Êé", Const.SOUND_INVALID);
+		put("µÆ", Const.SOUND_INVALID);
+		put("¾µ", Const.SOUND_INVALID);
+		put("ÒÂ", Const.SOUND_INVALID);
+		put("¿ã", Const.SOUND_INVALID);
+		put("Ð¬", Const.SOUND_INVALID);
+		put("Íà", Const.SOUND_INVALID);
+		put("Ã±", Const.SOUND_INVALID);
+		put("¹ø", Const.SOUND_INVALID);
+		put("Íë", Const.SOUND_INVALID);
+		put("¿ê", Const.SOUND_INVALID);
+		put("É×", Const.SOUND_INVALID);
+		put("ÅÌ", Const.SOUND_INVALID);
 		
-		put("ÖÓ", R.raw.sound076);
-		put("Ç½", R.raw.sound077);
-		put("×À", R.raw.sound078);
-		put("ÒÎ", R.raw.sound079);
-		put("»­", R.raw.sound080);
-		put("»¨", R.raw.sound081);
-		put("Äñ", R.raw.sound082);
-		put("³æ", R.raw.sound083);
-		put("Óã", R.raw.sound084);
-		put("Ïº", R.raw.sound085);
-		put("Ã¨", R.raw.sound086);
-		put("¹·", R.raw.sound087);
-		put("¼¦", R.raw.sound088);
-		put("Ñ¼", R.raw.sound089);
-		put("ÍÃ", R.raw.sound090);
+		put("ÖÓ", Const.SOUND_INVALID);
+		put("Ç½", Const.SOUND_INVALID);
+		put("×À", Const.SOUND_INVALID);
+		put("ÒÎ", Const.SOUND_INVALID);
+		put("»­", Const.SOUND_INVALID);
+		put("»¨", Const.SOUND_INVALID);
+		put("Äñ", Const.SOUND_INVALID);
+		put("³æ", Const.SOUND_INVALID);
+		put("Óã", Const.SOUND_INVALID);
+		put("Ïº", Const.SOUND_INVALID);
+		put("Ã¨", Const.SOUND_INVALID);
+		put("¹·", Const.SOUND_INVALID);
+		put("¼¦", Const.SOUND_INVALID);
+		put("Ñ¼", Const.SOUND_INVALID);
+		put("ÍÃ", Const.SOUND_INVALID);
 		
 		put("Àº", Const.SOUND_INVALID);
 		put("µÊ", Const.SOUND_INVALID);

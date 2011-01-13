@@ -12,6 +12,14 @@ public class ProgressSelector extends ProgressSelectorActivity {
 		return Config.GRID_WIDGET_ID;
 	}
 	
+	public int getSettingLayoutId() {
+		return Config.SETTINGS_LAYOUT_ID;
+	}
+	
+	public int getSeekBarId() {
+		return Config.SEEKBAR_WIDGET_ID;
+	}
+	
 	public int getCourseIcon(int position) {
 		return Config.getProgress().get(position).getCourseIcon();
 	}

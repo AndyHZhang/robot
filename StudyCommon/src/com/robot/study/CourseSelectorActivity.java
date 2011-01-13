@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Gallery;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -15,7 +16,7 @@ public abstract class CourseSelectorActivity extends Activity {
 
 	public abstract int getViewId();
 
-	public abstract int getGridId();
+	public abstract int getGalleryId();
 	
 	public abstract int getGridColumn();
 
@@ -25,7 +26,7 @@ public abstract class CourseSelectorActivity extends Activity {
 
 	public abstract String getNextActivityName();
 
-	private GridView mGrid;
+	private Gallery mGallery;
 	private Progress mProgress;
 
 	@Override
@@ -39,11 +40,11 @@ public abstract class CourseSelectorActivity extends Activity {
 			mProgress = getProgress(index);
 		}
 
-		mGrid = (GridView) findViewById(getGridId());
-		if (mGrid != null) {
-			mGrid.setNumColumns(getGridColumn());
-			mGrid.setAdapter(new CourseAdapter());
-			mGrid.setOnItemClickListener(new OnItemClickListener() {
+		mGallery = (Gallery) findViewById(getGalleryId());
+		if (mGallery != null) {
+			//mGrid.setNumColumns(getGridColumn());
+			mGallery.setAdapter(new CourseAdapter());
+			mGallery.setOnItemClickListener(new OnItemClickListener() {
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
 					Intent i = new Intent();
@@ -64,6 +65,8 @@ public abstract class CourseSelectorActivity extends Activity {
 				i = new ImageView(CourseSelectorActivity.this);
 				i.setImageResource(mProgress.getCourses().get(position)
 						.getIcon());
+				i.setScaleType(ImageView.ScaleType.CENTER);
+				i.setLayoutParams(new Gallery.LayoutParams(400, 300));
 			} else {
 				i = (ImageView) convertView;
 			}

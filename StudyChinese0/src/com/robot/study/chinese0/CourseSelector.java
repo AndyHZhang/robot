@@ -9,8 +9,8 @@ public class CourseSelector extends CourseSelectorActivity {
 		return Config.COURSE_SELECTOR_LAYOUT_ID;
 	}
 	
-	public int getGridId() {
-		return Config.GRID_WIDGET_ID;
+	public int getGalleryId() {
+		return Config.GALLERY_WIDGET_ID;
 	}
 	
 	public int getGridColumn() {
