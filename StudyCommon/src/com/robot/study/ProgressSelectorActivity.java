@@ -82,7 +82,7 @@ public abstract class ProgressSelectorActivity extends Activity {
 			mSeekBar = (SeekBar) view.findViewById(getSeekBarId());
 			mSeekBar.setProgress(speed);
 
-			Dialog dialog = new AlertDialog.Builder(this).setTitle("速度调节")
+			Dialog dialog = new AlertDialog.Builder(this).setTitle("间隔时间调节")
 					.setPositiveButton("确认", new OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							int speed = mSeekBar.getProgress();
@@ -114,7 +114,7 @@ public abstract class ProgressSelectorActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(0, MENU_SETTINGS, 0, "速度调节").setIcon(
+		menu.add(0, MENU_SETTINGS, 0, "间隔时间调节").setIcon(
 				android.R.drawable.ic_menu_preferences);
 		return true;
 	}

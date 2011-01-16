@@ -101,9 +101,22 @@ public abstract class CoursePlayerActivity extends Activity {
 		
 		mImage = (ImageView) findViewById(getImageId());
 
-		nextSlide(SLIDE_IMMEDIATELY);
-
 		mSlideSpeed = getSharedPreferences("settings", 0).getInt("speed", 3) * 1000;
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		
+		nextSlide(SLIDE_IMMEDIATELY);
+	}
+	
+	@Override
+	public void onPause() {
+		super.onPause();
+		
+		mHandler.removeCallbacks(mChangeSlide);
+		mMediaPlayer.release();
 	}
 
 	@Override
@@ -111,8 +124,7 @@ public abstract class CoursePlayerActivity extends Activity {
 		super.onDestroy();
 
 		// TODO we need to test whether music can stop when press home key
-		mHandler.removeCallbacks(mChangeSlide);
-		mMediaPlayer.release();
+		
 	}
 
 	@Override
