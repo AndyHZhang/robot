@@ -209,63 +209,63 @@ public class Config {
 	
 	public static final HashMap<String, Integer> mSoundMap = new HashMap<String, Integer>() {
 		{
-		put("1", Const.SOUND_INVALID);
-		put("2", Const.SOUND_INVALID);
-		put("3", Const.SOUND_INVALID);
-		put("4", Const.SOUND_INVALID);
-		put("5", Const.SOUND_INVALID);
-		put("6", Const.SOUND_INVALID);
-		put("7", Const.SOUND_INVALID);
-		put("8", Const.SOUND_INVALID);
-		put("9", Const.SOUND_INVALID);
-		put("10", Const.SOUND_INVALID);
-		put("11", Const.SOUND_INVALID);
-		put("12", Const.SOUND_INVALID);
-		put("13", Const.SOUND_INVALID);
-		put("14", Const.SOUND_INVALID);
-		put("15", Const.SOUND_INVALID);
-		put("16", Const.SOUND_INVALID);
-		put("17", Const.SOUND_INVALID);
-		put("18", Const.SOUND_INVALID);
-		put("19", Const.SOUND_INVALID);
-		put("20", Const.SOUND_INVALID);
-		put("21", Const.SOUND_INVALID);
-		put("22", Const.SOUND_INVALID);
+		put("1", R.raw.sound001);
+		put("2", R.raw.sound002);
+		put("3", R.raw.sound003);
+		put("4", R.raw.sound004);
+		put("5", R.raw.sound005);
+		put("6", R.raw.sound006);
+		put("7", R.raw.sound007);
+		put("8", R.raw.sound008);
+		put("9", R.raw.sound009);
+		put("10", R.raw.sound010);
+		put("11", R.raw.sound011);
+		put("12", R.raw.sound012);
+		put("13", R.raw.sound013);
+		put("14", R.raw.sound014);
+		put("15", R.raw.sound015);
+		put("16", R.raw.sound016);
+		put("17", R.raw.sound017);
+		put("18", R.raw.sound018);
+		put("19", R.raw.sound019);
+		put("20", R.raw.sound020);
+		put("21", R.raw.sound021);
+		put("22", R.raw.sound022);
 		put("23", Const.SOUND_INVALID);
 		
-		put("+", Const.SOUND_INVALID);
+		put("+", R.raw.sound023);
 		put("=", Const.SOUND_INVALID);
 		}
 	};
 	
 	public static final HashMap<String, Integer> mImageMap = new HashMap<String, Integer>() {
 		{
-		put("1", R.drawable.course01);
-		put("2", R.drawable.course02);
-		put("3", R.drawable.course03);
-		put("4", Const.IMAGE_INVALID);
-		put("5", Const.IMAGE_INVALID);
-		put("6", Const.IMAGE_INVALID);
-		put("7", Const.IMAGE_INVALID);
-		put("8", Const.IMAGE_INVALID);
-		put("9", Const.IMAGE_INVALID);
-		put("10", Const.IMAGE_INVALID);
-		put("11", Const.IMAGE_INVALID);
-		put("12", Const.IMAGE_INVALID);
-		put("13", Const.IMAGE_INVALID);
-		put("14", Const.IMAGE_INVALID);
-		put("15", Const.IMAGE_INVALID);
-		put("16", Const.IMAGE_INVALID);
-		put("17", Const.IMAGE_INVALID);
-		put("18", Const.IMAGE_INVALID);
-		put("19", Const.IMAGE_INVALID);
-		put("20", Const.IMAGE_INVALID);
-		put("21", Const.IMAGE_INVALID);
-		put("22", Const.IMAGE_INVALID);
-		put("23", Const.IMAGE_INVALID);
+		put("1", R.drawable.red01);
+		put("2", R.drawable.red02);
+		put("3", R.drawable.red03);
+		put("4", R.drawable.red04);
+		put("5", R.drawable.red05);
+		put("6", R.drawable.red06);
+		put("7", R.drawable.red07);
+		put("8", R.drawable.red08);
+		put("9", R.drawable.red09);
+		put("10", R.drawable.red10);
+		put("11", R.drawable.red11);
+		put("12", R.drawable.red12);
+		put("13", R.drawable.red13);
+		put("14", R.drawable.red14);
+		put("15", R.drawable.red15);
+		put("16", R.drawable.red16);
+		put("17", R.drawable.red17);
+		put("18", R.drawable.red18);
+		put("19", R.drawable.red19);
+		put("20", R.drawable.red20);
+		put("21", R.drawable.red21);
+		put("22", R.drawable.red22);
+		put("23", R.drawable.red23);
 		
-		put("+", Const.IMAGE_INVALID);
-		put("=", Const.IMAGE_INVALID);
+		put("+", R.drawable.blank);
+		put("=", R.drawable.blank);
 		}
 	};
 }
