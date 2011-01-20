@@ -86,7 +86,7 @@ public abstract class ProgressSelectorActivity extends Activity {
 					.setPositiveButton("х╥хо", new OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							// speed should more than 2s
-							int speed = mSeekBar.getProgress() + 2;
+							int speed = mSeekBar.getProgress() + 1;
 
 							getSharedPreferences("settings", 0).edit()
 								.putInt("speed", speed)

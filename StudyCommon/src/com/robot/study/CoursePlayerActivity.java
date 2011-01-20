@@ -41,6 +41,12 @@ public abstract class CoursePlayerActivity extends Activity {
 	Handler mHandler = new Handler();
 
 	MediaPlayer mMediaPlayer = new MediaPlayer();
+	
+	Runnable mFinish = new Runnable() {
+		public void run() {
+			finish();
+		}
+	};
 
 	Runnable mChangeSlide = new Runnable() {
 		public void run() {
@@ -116,6 +122,7 @@ public abstract class CoursePlayerActivity extends Activity {
 		super.onPause();
 		
 		mHandler.removeCallbacks(mChangeSlide);
+		mHandler.removeCallbacks(mFinish);
 		mMediaPlayer.release();
 	}
 
@@ -147,7 +154,7 @@ public abstract class CoursePlayerActivity extends Activity {
 	private void nextSlide(int interval) {
 		mIndex++;
 		if (mIndex == mString.length) {
-			finish();
+			mHandler.postDelayed(mFinish, interval);
 		} else {
 			mHandler.postDelayed(mChangeSlide, interval);
 		}
