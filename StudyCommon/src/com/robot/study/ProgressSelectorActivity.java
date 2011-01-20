@@ -85,7 +85,8 @@ public abstract class ProgressSelectorActivity extends Activity {
 			Dialog dialog = new AlertDialog.Builder(this).setTitle("间隔时间调节")
 					.setPositiveButton("确认", new OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
-							int speed = mSeekBar.getProgress();
+							// speed should more than 2s
+							int speed = mSeekBar.getProgress() + 2;
 
 							getSharedPreferences("settings", 0).edit()
 								.putInt("speed", speed)

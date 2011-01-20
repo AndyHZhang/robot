@@ -1,4 +1,4 @@
-package com.robot.study.addition;
+package com.robot.study.subtraction;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,7 +22,7 @@ public class Config {
 	public final static int PROGRESS_COLUMN = 7;
 	public final static int COURSE_COLUMN = 3;
 	
-	public final static String PACKAGE_NAME = "com.robot.study.addition";
+	public final static String PACKAGE_NAME = "com.robot.study.subtraction";
 	public final static String PROGRESS_SELECTOR_ACTIVITY_NAME = PACKAGE_NAME + ".ProgressSelector";
 	public final static String COURSE_SELECTOR_ACTIVITY_NAME = PACKAGE_NAME + ".CourseSelector";
 	public final static String COURSE_PLAYER_ACTIVITY_NAME = PACKAGE_NAME + ".CoursePlayer";
@@ -95,142 +95,142 @@ public class Config {
 	}
 	
 	public final static String[] CourseData1_1 = { 
-		"1","+","1","=","2", "1","+","2","=","3", "1","+","3","=","4"
+		"2","-","1","=","1", "3","-","1","=","2", "4","-","1","=","3"
 	};
 	public final static String[] CourseData1_2 = {
-		"1","+","4","=","5", "1","+","5","=","6", "1","+","6","=","7"
+		"3","-","2","=","1", "4","-","2","=","2", "5","-","2","=","3"
 	};
 	public final static String[] CourseData1_3 = {
-		"1","+","7","=","8", "1","+","8","=","9", "1","+","9","=","10",
+		"5","-","1","=","4", "6","-","1","=","5", "7","-","1","=","6",
 	};
 	
 	public final static String[] CourseData2_1 = { 
-		"2","+","2","=","4", "2","+","3","=","5", "2","+","4","=","6"
+		"4","-","3","=","1", "5","-","3","=","2", "6","-","3","=","3"
 	};
 	public final static String[] CourseData2_2 = { 
-		"2","+","5","=","7", "2","+","6","=","8", "2","+","7","=","9"
+		"5","-","4","=","1", "6","-","4","=","2", "7","-","4","=","3"
 	};
 	public final static String[] CourseData2_3 = { 
-		"2","+","8","=","10", "3","+","3","=","6", "3","+","4","=","7",
+		"6","-","2","=","4", "7","-","2","=","5", "8","-","2","=","6",
 	};
 	
 	public final static String[] CourseData3_1 = { 
-		"3","+","5","=","8", "3","+","6","=","9", "3","+","7","=","10"
+		"6","-","5","=","1", "7","-","5","=","2", "8","-","5","=","3"
 	};
 	public final static String[] CourseData3_2 = { 
-		"4","+","4","=","8", "4","+","5","=","9", "4","+","6","=","10"
+		"7","-","6","=","2", "8","-","6","=","2", "9","-","6","=","3"
 	};
 	public final static String[] CourseData3_3 = { 
-		"5","+","5","=","10", "10","+","10","=","20", "2","+","18","=","20",
+		"7","-","3","=","4", "8","-","3","=","5", "9","-","3","=","6",
 	};
 	
 	public final static String[] CourseData4_1 = { 
-		"1","+","10","=","11", "2","+","9","=","11", "3","+","8","=","11"
+		"8","-","7","=","1", "9","-","7","=","2", "10","-","7","=","3"
 	};
 	public final static String[] CourseData4_2 = { 
-		"4","+","7","=","11", "5","+","6","=","11", "6","+","6","=","12"
+		"9","-","8","=","1", "10","-","8","=","2", "11","-","8","=","3"
 	};
 	public final static String[] CourseData4_3 = { 
-		"5","+","7","=","12", "4","+","8","=","12", "3","+","9","=","12",
+		"8","-","4","=","4", "9","-","4","=","5", "10","-","4","=","6",
 	};
 	
 	public final static String[] CourseData5_1 = { 
-		"2","+","10","=","12", "1","+","11","=","12", "6","+","7","=","13"
+		"10","-","9","=","1", "11","-","9","=","2", "12","-","9","=","3"
 	};
 	public final static String[] CourseData5_2 = { 
-		"5","+","8","=","13", "4","+","9","=","13", "3","+","10","=","13"
+		"11","-","10","=","1", "12","-","10","=","2", "13","-","10","=","3"
 	};
 	public final static String[] CourseData5_3 = { 
-		"2","+","11","=","13", "1","+","12","=","13", "7","+","7","=","14",
+		"9","-","5","=","4", "10","-","5","=","5", "11","-","5","=","6",
 	};
 	
 	public final static String[] CourseData6_1 = { 
-		"6","+","8","=","14", "5","+","9","=","14", "4","+","10","=","14"
+		"12","-","11","=","1", "13","-","11","=","2", "14","-","11","=","3"
 	};
 	public final static String[] CourseData6_2 = { 
-		"3","+","11","=","14", "2","+","12","=","14", "1","+","13","=","14"
+		"13","-","12","=","1", "14","-","12","=","2", "15","-","12","=","3"
 	};
 	public final static String[] CourseData6_3 = { 
-		"7","+","8","=","15", "6","+","9","=","15", "5","+","10","=","15",
+		"10","-","6","=","4", "11","-","6","=","5", "12","-","6","=","6",
 	};
 	
 	public final static String[] CourseData7_1 = { 
-		"4","+","11","=","15", "3","+","12","=","15", "2","+","11","=","15"
+		"14","-","13","=","1", "15","-","13","=","2", "16","-","13","=","3"
 	};
 	public final static String[] CourseData7_2 = { 
-		"1","+","14","=","15", "8","+","8","=","16", "7","+","9","=","16"
+		"15","-","14","=","1", "16","-","14","=","2", "17","-","14","=","3"
 	};
 	public final static String[] CourseData7_3 = { 
-		"6","+","10","=","16", "5","+","11","=","16", "4","+","12","=","16",
+		"11","-","7","=","4", "12","-","7","=","5", "13","-","7","=","6",
 	};
 	
 	public final static String[] CourseData8_1 = { 
-		"3","+","13","=","16", "2","+","14","=","16", "1","+","15","=","16"
+		"16","-","15","=","1", "17","-","15","=","2", "18","-","15","=","3"
 	};
 	public final static String[] CourseData8_2 = { 
-		"8","+","9","=","17", "7","+","10","=","17", "6","+","11","=","17"
+		"17","-","16","=","1", "18","-","16","=","2", "19","-","16","=","3"
 	};
 	public final static String[] CourseData8_3 = { 
-		"5","+","12","=","17", "4","+","13","=","17", "3","+","14","=","17",
+		"12","-","8","=","4", "13","-","8","=","5", "14","-","8","=","6",
 	};
 	
 	public final static String[] CourseData9_1 = { 
-		"2","+","15","=","17", "1","+","16","=","17", "9","+","9","=","18"
+		"8","-","1","=","7", "9","-","1","=","8", "10","-","1","=","9"
 	};
 	public final static String[] CourseData9_2 = {
-		"8","+","10","=","18", "7","+","11","=","18", "6","+","12","=","18"
+		"9","-","2","=","7", "10","-","2","=","8", "11","-","2","=","9"
 	};
 	public final static String[] CourseData9_3 = {
-		"5","+","13","=","18", "4","+","14","=","18", "3","+","15","=","18",
+		"11","-","1","=","10", "12","-","1","=","11", "13","-","1","=","12",
 	};
 	
 	public final static String[] CourseData10_1 = { 
-		"2","+","16","=","18", "1","+","17","=","18", "9","+","10","=","19"
+		"10","-","3","=","7", "11","-","3","=","8", "12","-","3","=","9"
 	};
 	public final static String[] CourseData10_2 = { 
-		"8","+","11","=","19", "7","+","12","=","19", "6","+","13","=","19"
+		"11","-","4","=","7", "12","-","4","=","8", "13","-","4","=","9"
 	};
 	public final static String[] CourseData10_3 = { 
-		"5","+","14","=","19", "4","+","15","=","19", "3","+","16","=","19",
+		"12","-","2","=","10", "13","-","2","=","11", "14","-","2","=","12",
 	};
 	
 	public final static String[] CourseData11_1 = { 
-		"2","+","17","=","19", "1","+","18","=","19", "9","+","11","=","20"
+		"12","-","5","=","7", "13","-","5","=","8", "14","-","5","=","9"
 	};
 	public final static String[] CourseData11_2 = { 
-		"8","+","12","=","20", "7","+","13","=","20", "6","+","14","=","20"
+		"13","-","6","=","7", "14","-","6","=","8", "15","-","6","=","9"
 	};
 	public final static String[] CourseData11_3 = { 
-		"5","+","15","=","20", "4","+","16","=","20", "3","+","17","=","20",
+		"13","-","3","=","10", "14","-","3","=","11", "15","-","3","=","12",
 	};
 	
 	public final static String[] CourseData12_1 = { 
-		"1","+","19","=","20", "10","+","11","=","21", "9","+","12","=","21"
+		"14","-","7","=","7", "15","-","7","=","8", "16","-","7","=","9"
 	};
 	public final static String[] CourseData12_2 = { 
-		"8","+","13","=","21", "7","+","14","=","21", "6","+","15","=","21"
+		"15","-","8","=","7", "16","-","8","=","8", "17","-","8","=","9"
 	};
 	public final static String[] CourseData12_3 = { 
-		"5","+","16","=","21", "4","+","17","=","21", "3","+","18","=","21",
+		"14","-","4","=","10", "15","-","4","=","11", "16","-","4","=","12",
 	};
 	public final static String[] CourseData13_1 = { 
-		"2","+","19","=","21", "1","+","20","=","21", "11","+","11","=","22"
+		"30","-","20","=","10", "29","-","21","=","8", "28","-","22","=","6"
 	};
 	public final static String[] CourseData13_2 = { 
-		"10","+","12","=","22", "9","+","13","=","22", "8","+","14","=","22"
+		"33","-","22","=","11", "17","-","9","=","8", "36","-","29","=","7"
 	};
 	public final static String[] CourseData13_3 = { 
-		"7","+","15","=","22", "6","+","15","=","22", "5","+","17","=","22",
+		"23","-","18","=","5", "15","-","1","=","14", "13","-","1","=","12",
 	};
 	
 	public final static String[] CourseData14_1 = { 
-		"4","+","18","=","22", "3","+","19","=","22", "2","+","20","=","22"
+		"60","-","31","=","29", "50","-","40","=","10", "29","-","23","=","6"
 	};
 	public final static String[] CourseData14_2 = { 
-		"1","+","21","=","22", "11","+","12","=","23", "10","+","13","=","23"
+		"62","-","20","=","42", "58","-","7","=","51", "37","-","30","=","7"
 	};
 	public final static String[] CourseData14_3 = { 
-		"9","+","14","=","23", "8","+","15","=","23", "7","+","16","=","23",
+		"24","-","19","=","5", "16","-","2","=","14", "60","-","1","=","59",
 	};
 	
 	public static final HashMap<String, Integer> mSoundMap = new HashMap<String, Integer>() {
@@ -258,8 +258,24 @@ public class Config {
 		put("21", R.raw.sound021);
 		put("22", R.raw.sound022);
 		put("23", Const.SOUND_INVALID);
+		put("24", Const.SOUND_INVALID);
+		put("28", Const.SOUND_INVALID);
+		put("29", Const.SOUND_INVALID);
+		put("30", Const.SOUND_INVALID);
+		put("31", Const.SOUND_INVALID);
+		put("33", Const.SOUND_INVALID);
+		put("36", Const.SOUND_INVALID);
+		put("37", Const.SOUND_INVALID);
+		put("40", Const.SOUND_INVALID);
+		put("42", Const.SOUND_INVALID);
+		put("50", Const.SOUND_INVALID);
+		put("51", Const.SOUND_INVALID);
+		put("58", Const.SOUND_INVALID);
+		put("59", Const.SOUND_INVALID);
+		put("60", Const.SOUND_INVALID);
+		put("62", Const.SOUND_INVALID);
 		
-		put("+", R.raw.sound023);
+		put("-", Const.SOUND_INVALID);
 		put("=", Const.SOUND_INVALID);
 		}
 	};
@@ -289,8 +305,24 @@ public class Config {
 		put("21", R.drawable.red21);
 		put("22", R.drawable.red22);
 		put("23", R.drawable.red23);
+		put("24", Const.SOUND_INVALID);
+		put("28", Const.SOUND_INVALID);
+		put("29", Const.SOUND_INVALID);
+		put("30", Const.SOUND_INVALID);
+		put("31", Const.SOUND_INVALID);
+		put("33", Const.SOUND_INVALID);
+		put("36", Const.SOUND_INVALID);
+		put("37", Const.SOUND_INVALID);
+		put("40", Const.SOUND_INVALID);
+		put("42", Const.SOUND_INVALID);
+		put("50", Const.SOUND_INVALID);
+		put("51", Const.SOUND_INVALID);
+		put("58", Const.SOUND_INVALID);
+		put("59", Const.SOUND_INVALID);
+		put("60", Const.SOUND_INVALID);
+		put("62", Const.SOUND_INVALID);
 		
-		put("+", R.drawable.blank);
+		put("-", R.drawable.blank);
 		put("=", R.drawable.blank);
 		}
 	};
