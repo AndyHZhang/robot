@@ -3,7 +3,11 @@ package com.robot.evaluation;
 import java.util.HashMap;
 
 public class Const {
-	private static final boolean mDebug = true;
+	private static final boolean mDebug = false;
+	
+	public static final String PREFS = "com.robot.evaluation.config";
+	public static final String PREFS_NAME = "com.robot.evaluation.NAME";
+	public static final String PREFS_DATE = "como.robot.evaluation.DATE";
 	
 	private static final HashMap<String, Cases> TotalCasesForTest = new HashMap<String, Cases>() {
 		{

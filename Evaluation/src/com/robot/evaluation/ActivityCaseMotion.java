@@ -10,7 +10,7 @@ public class ActivityCaseMotion extends ActivityCaseBase {
 		
 		mTitleContent.setText(cases.mMotionCase.mTitle);
 		mMethodContent.setText(cases.mMotionCase.mMethod);
-		mStandardContent.setText(cases.mMotionCase.mMethod);
+		mStandardContent.setText(cases.mMotionCase.mStandard);
 	}
 
 }

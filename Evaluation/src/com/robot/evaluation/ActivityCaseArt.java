@@ -10,7 +10,7 @@ public class ActivityCaseArt extends ActivityCaseBase {
 		
 		mTitleContent.setText(cases.mArtCase.mTitle);
 		mMethodContent.setText(cases.mArtCase.mMethod);
-		mStandardContent.setText(cases.mArtCase.mMethod);
+		mStandardContent.setText(cases.mArtCase.mStandard);
 	}
 
 }

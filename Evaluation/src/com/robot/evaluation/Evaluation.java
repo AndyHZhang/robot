@@ -10,8 +10,11 @@ import android.content.IntentFilter;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 public class Evaluation extends TabActivity {
 	
@@ -52,7 +55,7 @@ public class Evaluation extends TabActivity {
 			
 			int currentTab = mTabHost.getCurrentTab();
 			ImageView mImage = (ImageView) mTabHost.getTabWidget().getChildAt(
-					currentTab).findViewById(android.R.id.icon);
+					currentTab).findViewById(R.id.icon);
 			mImage.setImageResource(R.drawable.star_big_on);
 			
 			if (isAllDataReady()) {
@@ -134,32 +137,52 @@ public class Evaluation extends TabActivity {
 
 		Intent i = new Intent(this, ActivityCaseMotion.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
+		View v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+				mTabHost.getTabWidget(), false);
+		TextView t = (TextView) v.findViewById(R.id.title);
+		t.setText("运动智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab1")
-        		.setIndicator("运动智能")
+        		.setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseArt.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+				mTabHost.getTabWidget(), false);
+		t = (TextView) v.findViewById(R.id.title);
+		t.setText("艺术智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab2")
-                .setIndicator("艺术智能")
+                .setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseCognitive.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+				mTabHost.getTabWidget(), false);
+		t = (TextView) v.findViewById(R.id.title);
+		t.setText("认知智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab3")
-                .setIndicator("认知智能")
+                .setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseSpeak.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+				mTabHost.getTabWidget(), false);
+		t = (TextView) v.findViewById(R.id.title);
+		t.setText("语言智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab4")
-                .setIndicator("语言智能")
+                .setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseEQ.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+				mTabHost.getTabWidget(), false);
+		t = (TextView) v.findViewById(R.id.title);
+		t.setText("情商智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab5")
-                .setIndicator("情商智能")
+                .setIndicator(v)
                 .setContent(i));        
 	}
 	

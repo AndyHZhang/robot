@@ -10,7 +10,7 @@ public class ActivityCaseSpeak extends ActivityCaseBase {
 		
 		mTitleContent.setText(cases.mSpeakCase.mTitle);
 		mMethodContent.setText(cases.mSpeakCase.mMethod);
-		mStandardContent.setText(cases.mSpeakCase.mMethod);
+		mStandardContent.setText(cases.mSpeakCase.mStandard);
 	}
 
 }

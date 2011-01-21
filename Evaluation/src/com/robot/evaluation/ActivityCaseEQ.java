@@ -10,7 +10,7 @@ public class ActivityCaseEQ extends ActivityCaseBase {
 		
 		mTitleContent.setText(cases.mEQCase.mTitle);
 		mMethodContent.setText(cases.mEQCase.mMethod);
-		mStandardContent.setText(cases.mEQCase.mMethod);
+		mStandardContent.setText(cases.mEQCase.mStandard);
 	}
 
 }

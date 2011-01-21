@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public abstract class ActivityCaseBase extends Activity {
 	
@@ -18,9 +18,9 @@ public abstract class ActivityCaseBase extends Activity {
 	public static final String CATEGORY_SCORE = "com.robot.evaluation.score";
 	public static final String CATEGORY_START_MONTH_AGE = "com.robot.evaluation.start";
 	
-	protected EditText mTitleContent;
-	protected EditText mMethodContent;
-	protected EditText mStandardContent;
+	protected TextView mTitleContent;
+	protected TextView mMethodContent;
+	protected TextView mStandardContent;
 	
 	private Button mYesBtn;
 	private Button mNoBtn;
@@ -36,9 +36,9 @@ public abstract class ActivityCaseBase extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.show_case);
 		
-		mTitleContent = (EditText) findViewById(R.id.title_content);
-		mMethodContent = (EditText) findViewById(R.id.method_content);
-		mStandardContent = (EditText) findViewById(R.id.standard_content);
+		mTitleContent = (TextView) findViewById(R.id.title_content);
+		mMethodContent = (TextView) findViewById(R.id.method_content);
+		mStandardContent = (TextView) findViewById(R.id.standard_content);
 		
 		mYesBtn = (Button) findViewById(R.id.yes_btn);
 		mYesBtn.setOnClickListener(new OnClickListener() {

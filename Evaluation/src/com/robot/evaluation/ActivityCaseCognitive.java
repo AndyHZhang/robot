@@ -10,7 +10,7 @@ public class ActivityCaseCognitive extends ActivityCaseBase {
 		
 		mTitleContent.setText(cases.mCognitiveCase.mTitle);
 		mMethodContent.setText(cases.mCognitiveCase.mMethod);
-		mStandardContent.setText(cases.mCognitiveCase.mMethod);
+		mStandardContent.setText(cases.mCognitiveCase.mStandard);
 	}
 
 }
