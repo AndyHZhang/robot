@@ -1,43 +1,63 @@
 package com.robot.study;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
+import android.view.View.OnTouchListener;
+import android.widget.LinearLayout;
 
-public abstract class WelcomeActivity extends Activity {
+public class WelcomeActivity extends Activity {
 
-	private static final String TAG = "Welcome";
+	// private static final String TAG = "Welcome";
 
-	private static final int LOADING_TIME = 3000;
+	private static final int LOADING_TIME = 3 * 1000;
 
-	public abstract int getViewId();
-	public abstract String getNextPackageName();
-	public abstract String getNextActivityName();
+	private boolean gotWelcomeImage = false;
+	public void setWelcomeImage(int res) {
+		setContentView(R.layout.welcome);
+
+		LinearLayout main = (LinearLayout) findViewById(R.id.welcome);
+		if (main != null) {
+			main.setBackgroundResource(res);
+		}
+
+		gotWelcomeImage = true;
+	}
+	
+	public interface OnNextActivityListener {
+		void onNextActivity();
+	}
+	
+	private OnNextActivityListener mOnNextActivityListener;
+	
+	public void setOnNextActivityListener(OnNextActivityListener listener) {
+		mOnNextActivityListener = listener;
+	}
 
 	Handler mHandler = new Handler();
 
 	Runnable mLoadMainActivity = new Runnable() {
 		public void run() {
-			Intent i = new Intent();
-			i.setClassName(getNextPackageName(), getNextActivityName());
-			WelcomeActivity.this.startActivity(i);
-			WelcomeActivity.this.finish();
+			if (mOnNextActivityListener != null) {
+				mOnNextActivityListener.onNextActivity();
+			}
 		}
 	};
 
-	/** Called when the activity is first created. */
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+	protected void onResume() {
+		super.onResume();
 
-		setContentView(getViewId());
+		if (!gotWelcomeImage) {
+			throw new RuntimeException(
+					"setWelcomeImage() should be called in onCreate");
+		}
+
 		mHandler.postDelayed(mLoadMainActivity, LOADING_TIME);
 	}
 
 	@Override
-	public void onDestroy() {
-		super.onDestroy();
+	protected void onPause() {
+		super.onPause();
 
 		mHandler.removeCallbacks(mLoadMainActivity);
 	}

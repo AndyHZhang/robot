@@ -1,17 +1,27 @@
 package com.robot.study.subtraction;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import com.robot.study.WelcomeActivity;
 
 public class Welcome extends WelcomeActivity {
-	public int getViewId() {
-		return Config.WELCOME_LAYOUT_ID;
-	}
 	
-	public String getNextPackageName() {
-		return Config.PACKAGE_NAME;
-	}
-	
-	public String getNextActivityName() {
-		return Config.PROGRESS_SELECTOR_ACTIVITY_NAME;
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setWelcomeImage(R.drawable.welcome);
+
+		setOnNextActivityListener(new OnNextActivityListener() {
+			public void onNextActivity() {
+				String packageName = getPackageName();
+				String activityName = ProgressSelector.class.getName();
+				startActivity(new Intent().setClassName(packageName,
+						activityName));
+
+				finish();
+			}
+		});
 	}
 }

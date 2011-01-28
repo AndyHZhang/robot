@@ -9,22 +9,14 @@ import com.robot.study.Progress;
 
 public class Config {
 	
-	public final static int WELCOME_LAYOUT_ID = R.layout.welcome;
-	public final static int SETTINGS_LAYOUT_ID = R.layout.settings;
-	public final static int PROGRESS_SELECTOR_LAYOUT_ID = R.layout.progress_selector;
 	public final static int COURSE_SELECTOR_LAYOUT_ID = R.layout.course_selector;
 	public final static int COURSE_PLAYER_LAYOUT_ID = R.layout.courses;
-	public final static int GRID_WIDGET_ID = R.id.grid;
-	public final static int SEEKBAR_WIDGET_ID = R.id.seek;
 	public final static int GALLERY_WIDGET_ID = R.id.gallery;
 	public final static int IMAGE_WIDGET_ID = R.id.image;
 	public final static int STRING_NEXT_COURSE = R.string.next_course;
-	public final static int PROGRESS_COLUMN = 7;
 	public final static int COURSE_COLUMN = 3;
 	
 	public final static String PACKAGE_NAME = "com.robot.study.subtraction";
-	public final static String PROGRESS_SELECTOR_ACTIVITY_NAME = PACKAGE_NAME + ".ProgressSelector";
-	public final static String COURSE_SELECTOR_ACTIVITY_NAME = PACKAGE_NAME + ".CourseSelector";
 	public final static String COURSE_PLAYER_ACTIVITY_NAME = PACKAGE_NAME + ".CoursePlayer";
 	
 	private static ArrayList<Progress> mProgresses;

@@ -2,8 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="StudyCommon_src"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/StudyCommon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UCommon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/StudyCommon"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
