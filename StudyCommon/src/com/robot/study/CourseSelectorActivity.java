@@ -9,20 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.AdapterView.OnItemClickListener;
 
-public abstract class CourseSelectorActivity extends Activity {
-
-	public abstract Progress getProgress(int index);
+public class CourseSelectorActivity extends Activity {
 
 	private Gallery mGallery;
-	private Progress mProgress;
-	
-	public void setProgress(Progress p) {
-		mProgress = p;
-	}
-
-	protected Progress getProgress() {
-		return mProgress;
-	}
 
 	public interface OnCourseSelectorListener {
 		public void onCourseSelector(int position);
@@ -32,17 +21,6 @@ public abstract class CourseSelectorActivity extends Activity {
 
 	public void setOnCourseSelectorListener(OnCourseSelectorListener listener) {
 		mOnCourseSelectorListener = listener;
-	}
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		Intent i = getIntent();
-		if (i != null) {
-			int index = i.getIntExtra("progress", 0);
-			mProgress = getProgress(index);
-		}
 	}
 
 	public void setAdapter(BaseAdapter adapter) {

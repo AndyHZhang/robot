@@ -13,22 +13,8 @@ import com.robot.study.CourseSelectorActivity;
 import com.robot.study.Progress;
 
 public class CourseSelector extends CourseSelectorActivity {
-
-	public int getViewId() {
-		return Config.COURSE_SELECTOR_LAYOUT_ID;
-	}
-
-	public int getGalleryId() {
-		return Config.GALLERY_WIDGET_ID;
-	}
-
-	public int getGridColumn() {
-		return Config.COURSE_COLUMN;
-	}
-
-	public Progress getProgress(int index) {
-		return Config.getProgress().get(index);
-	}
+	
+	private Progress mProgress;
 
 	private class CourseAdapter extends BaseAdapter {
 		public View getView(int position, View convertView, ViewGroup parent) {
@@ -36,7 +22,7 @@ public class CourseSelector extends CourseSelectorActivity {
 
 			if (convertView == null) {
 				i = new ImageView(CourseSelector.this);
-				i.setImageResource(getProgress().getCourses().get(position)
+				i.setImageResource(mProgress.getCourses().get(position)
 						.getIcon());
 				i.setScaleType(ImageView.ScaleType.CENTER);
 				i.setLayoutParams(new Gallery.LayoutParams(Const.COURSE_ICON_W,
@@ -49,7 +35,7 @@ public class CourseSelector extends CourseSelectorActivity {
 		}
 
 		public final int getCount() {
-			return getProgress().getCourses().size();
+			return mProgress.getCourses().size();
 		}
 
 		public final Object getItem(int position) {
@@ -64,6 +50,12 @@ public class CourseSelector extends CourseSelectorActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Intent i = getIntent();
+		if (i != null) {
+			int index = i.getIntExtra("progress", 0);
+			mProgress = Config.getProgress().get(index);
+		}
 
 		setOnCourseSelectorListener(new OnCourseSelectorListener() {
 			public void onCourseSelector(int position) {
@@ -72,7 +64,7 @@ public class CourseSelector extends CourseSelectorActivity {
 				String activityName = CoursePlayer.class.getName();
 				startActivity(new Intent().setClassName(packageName,
 						activityName).putExtra("course",
-						getProgress().getCourses().get(position).getText()));
+								mProgress.getCourses().get(position).getText()));
 			}
 		});
 

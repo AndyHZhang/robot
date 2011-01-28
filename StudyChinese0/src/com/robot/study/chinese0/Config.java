@@ -9,15 +9,9 @@ import com.robot.study.Progress;
 
 public class Config {
 	
-	public final static int COURSE_SELECTOR_LAYOUT_ID = R.layout.course_selector;
 	public final static int COURSE_PLAYER_LAYOUT_ID = R.layout.courses;
-	public final static int GALLERY_WIDGET_ID = R.id.gallery;
 	public final static int TEXT_WIDGET_ID = R.id.text;
 	public final static int STRING_NEXT_COURSE = R.string.next_course;
-	public final static int COURSE_COLUMN = 3;
-	
-	public final static String PACKAGE_NAME = "com.robot.study.chinese0";
-	public final static String COURSE_PLAYER_ACTIVITY_NAME = PACKAGE_NAME + ".CoursePlayer";
 	
 	private static ArrayList<Progress> mProgresses;
 	public static ArrayList<Progress> getProgress() {
