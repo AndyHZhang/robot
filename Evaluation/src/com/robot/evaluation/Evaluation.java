@@ -15,10 +15,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Evaluation extends TabActivity {
-	
-	public static int sCurrentMonthAge = 5;
 	
 	private int mMotionScore = Integer.MIN_VALUE;
 	private int mArtScore = Integer.MIN_VALUE;
@@ -27,6 +26,7 @@ public class Evaluation extends TabActivity {
 	private int mEQScore = Integer.MIN_VALUE;
 	
 	private int mStartMonthAge;
+	public static int sCurrentMonthAge;
 	
 	private static final String TAG = "Evaluation";
 	
@@ -133,6 +133,8 @@ public class Evaluation extends TabActivity {
 		super.onCreate(savedInstanceState);
 		mTabHost = getTabHost();
 		
+		sCurrentMonthAge = getIntent().getIntExtra(Const.ACTION_MONTH_AGE, 0);
+		Toast.makeText(this, "当前月龄为" + Integer.toString(sCurrentMonthAge), 3000).show();
 		mStartMonthAge = getStartMonthAge(sCurrentMonthAge);
 
 		Intent i = new Intent(this, ActivityCaseMotion.class);

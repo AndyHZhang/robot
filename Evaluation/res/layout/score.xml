@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TableRow>
+		<TextView android:id="@+id/motion"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="运动智能得分：" />
+	</TableRow>
+	<TableRow>
+		<TextView android:id="@+id/art"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="艺术智能得分：" />
+	</TableRow>
+	<TableRow>
+		<TextView android:id="@+id/cognitive"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="认知智能得分：" />
+	</TableRow>
+	<TableRow>
+		<TextView android:id="@+id/speak"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="语言智能得分：" />
+	</TableRow>
+	<TableRow>
+		<TextView android:id="@+id/eq"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="情商智能得分：" />
+	</TableRow>
+	<TableRow>
+		<TextView android:id="@+id/score"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="发育商得分：" />
+	</TableRow>
+</TableLayout>
