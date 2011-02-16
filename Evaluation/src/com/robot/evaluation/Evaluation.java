@@ -5,14 +5,15 @@ import android.app.TabActivity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -132,6 +133,7 @@ public class Evaluation extends TabActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mTabHost = getTabHost();
+		mTabHost.setLayoutParams(new LayoutParams(600, 400));
 		
 		sCurrentMonthAge = getIntent().getIntExtra(Const.ACTION_MONTH_AGE, 0);
 		Toast.makeText(this, "当前月龄为" + Integer.toString(sCurrentMonthAge), 3000).show();
