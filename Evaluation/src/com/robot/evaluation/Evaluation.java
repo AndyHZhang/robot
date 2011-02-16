@@ -1,7 +1,6 @@
 package com.robot.evaluation;
 
 import android.app.AlertDialog;
-import android.app.TabActivity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,10 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TabHost;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Evaluation extends TabActivity {
@@ -54,10 +50,10 @@ public class Evaluation extends TabActivity {
 		public void onReceive(Context context, Intent intent) {
 			recordScore(intent);
 			
-			int currentTab = mTabHost.getCurrentTab();
-			ImageView mImage = (ImageView) mTabHost.getTabWidget().getChildAt(
-					currentTab).findViewById(R.id.icon);
-			mImage.setImageResource(R.drawable.star_big_on);
+			//int currentTab = mTabHost.getCurrentTab();
+			//ImageView mImage = (ImageView) mTabHost.getTabWidget().getChildAt(
+			//		currentTab).findViewById(R.id.icon);
+			//mImage.setImageResource(R.drawable.star_big_on);
 			
 			if (isAllDataReady()) {
 				new AlertDialog.Builder(Evaluation.this)
@@ -67,12 +63,12 @@ public class Evaluation extends TabActivity {
 					public void onClick(DialogInterface dialog, int whichButton) {
 						finish();
 						
-						Intent i = new Intent(Evaluation.this, TrainingPlan.class);
-						i.putExtra(TrainingPlan.SCORE_MOTION, mMotionScore);
-						i.putExtra(TrainingPlan.SCORE_ART, mArtScore);
-						i.putExtra(TrainingPlan.SCORE_COGNITIVE, mCognitiveScore);
-						i.putExtra(TrainingPlan.SCORE_SPEAK, mSpeakScore);
-						i.putExtra(TrainingPlan.SCORE_EQ, mEQScore);
+						Intent i = new Intent(Evaluation.this, Score.class);
+						i.putExtra(Score.SCORE_MOTION, mMotionScore);
+						i.putExtra(Score.SCORE_ART, mArtScore);
+						i.putExtra(Score.SCORE_COGNITIVE, mCognitiveScore);
+						i.putExtra(Score.SCORE_SPEAK, mSpeakScore);
+						i.putExtra(Score.SCORE_EQ, mEQScore);
 						startActivity(i);
 					}
 				})
@@ -133,7 +129,6 @@ public class Evaluation extends TabActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mTabHost = getTabHost();
-		mTabHost.setLayoutParams(new LayoutParams(600, 400));
 		
 		sCurrentMonthAge = getIntent().getIntExtra(Const.ACTION_MONTH_AGE, 0);
 		Toast.makeText(this, "当前月龄为" + Integer.toString(sCurrentMonthAge), 3000).show();
@@ -141,50 +136,50 @@ public class Evaluation extends TabActivity {
 
 		Intent i = new Intent(this, ActivityCaseMotion.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
-		View v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+		View v = LayoutInflater.from(this).inflate(R.layout.tab_indicator_01,
 				mTabHost.getTabWidget(), false);
-		TextView t = (TextView) v.findViewById(R.id.title);
-		t.setText("运动智能");
+		//TextView t = (TextView) v.findViewById(R.id.title);
+		//t.setText("运动智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab1")
         		.setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseArt.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
-		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator_02,
 				mTabHost.getTabWidget(), false);
-		t = (TextView) v.findViewById(R.id.title);
-		t.setText("艺术智能");
+		//t = (TextView) v.findViewById(R.id.title);
+		//t.setText("艺术智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab2")
                 .setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseCognitive.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
-		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator_03,
 				mTabHost.getTabWidget(), false);
-		t = (TextView) v.findViewById(R.id.title);
-		t.setText("认知智能");
+		//t = (TextView) v.findViewById(R.id.title);
+		//t.setText("认知智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab3")
                 .setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseSpeak.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
-		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator_04,
 				mTabHost.getTabWidget(), false);
-		t = (TextView) v.findViewById(R.id.title);
-		t.setText("语言智能");
+		//t = (TextView) v.findViewById(R.id.title);
+		//t.setText("语言智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab4")
                 .setIndicator(v)
                 .setContent(i));
 		
 		i = new Intent(this, ActivityCaseEQ.class);
 		i.putExtra(ActivityCaseBase.CATEGORY_START_MONTH_AGE, mStartMonthAge);
-		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator,
+		v = LayoutInflater.from(this).inflate(R.layout.tab_indicator_05,
 				mTabHost.getTabWidget(), false);
-		t = (TextView) v.findViewById(R.id.title);
-		t.setText("情商智能");
+		//t = (TextView) v.findViewById(R.id.title);
+		//t.setText("情商智能");
 		mTabHost.addTab(mTabHost.newTabSpec("tab5")
                 .setIndicator(v)
                 .setContent(i));        

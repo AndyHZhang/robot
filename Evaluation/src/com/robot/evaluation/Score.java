@@ -3,6 +3,9 @@ package com.robot.evaluation;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Score extends Activity {
@@ -44,6 +47,18 @@ public class Score extends Activity {
 			
 			int score = (scroeMotion + scoreArt + scoreCognitive + scoreSpeak + scoreEQ) / 5;
 			mScore.setText("发育商得分：" + score);
+		}
+		
+		Button mBtn = (Button) findViewById(R.id.training_plan);
+		if (mBtn != null) {
+			mBtn.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					finish();
+					
+					Intent i = new Intent(Score.this, TrainingPlan.class);
+					startActivity(i);
+				}
+			});
 		}
 	}
 }

@@ -61,7 +61,7 @@ public class Login extends Activity {
 		
 		mButton = (Button) findViewById(R.id.login);
 		if (mNameStr == null) {
-			mButton.setEnabled(false);
+			//mButton.setEnabled(false);
 		}
 		mButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {

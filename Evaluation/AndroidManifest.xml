@@ -21,8 +21,9 @@
         <activity android:name=".ActivityCaseSpeak" android:screenOrientation="landscape" />
         <activity android:name=".ActivityCaseEQ" android:screenOrientation="landscape" />
         <activity android:name=".TrainingPlan" android:screenOrientation="landscape" />
+        <activity android:name=".Score" android:screenOrientation="landscape" />
 
     </application>
-
+	<uses-sdk android:minSdkVersion="4" />
 
 </manifest> 

@@ -3,11 +3,19 @@
     android:layout_width="fill_parent" 
     android:layout_height="fill_parent"
     android:scrollbars="vertical" 
-    android:fadingEdge="vertical"> 
+    android:fadingEdge="vertical"
+    android:background="@drawable/login_bg"> 
       
     <TextView android:id="@+id/plan"
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
+		android:textSize="25px"
+	    android:typeface="sans"
+	    android:textStyle="bold"
+	    android:textColor="#FFFFFF"
+	    android:shadowRadius="1"
+	    android:shadowDx="2"
+	    android:shadowColor="#006838"
 		android:text="@string/plan_01" />
 		
 </ScrollView>

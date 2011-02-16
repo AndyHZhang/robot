@@ -69,7 +69,12 @@ public abstract class ActivityCaseBase extends Activity {
 	}
 	
 	private void nextEvaluation() {
-		int score = mActualMonthAge * 100 / mCurrentMonthAge;
+		int score;
+		if (mCurrentMonthAge == 0) {
+			score = (mActualMonthAge+1) * 100 / (mCurrentMonthAge+1);
+		} else {
+			score = mActualMonthAge * 100 / mCurrentMonthAge;
+		}
 		Intent i = new Intent(REPORT_SCORE);
 		i.putExtra(CATEGORY_TYPE, getClass().getSimpleName());
 		i.putExtra(CATEGORY_SCORE, score);
