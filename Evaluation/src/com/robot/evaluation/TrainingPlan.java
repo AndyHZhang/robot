@@ -2,6 +2,7 @@ package com.robot.evaluation;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class TrainingPlan extends Activity {
 	
@@ -14,6 +15,10 @@ public class TrainingPlan extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.plan);
+		
+		TextView tx = (TextView) findViewById(R.id.plan);
+		tx.setText(Const.TrainingPlan.get(Integer.toString(Evaluation.sCurrentMonthAge)));
 	}
 }

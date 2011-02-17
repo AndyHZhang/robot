@@ -61,6 +61,50 @@ public class Const {
 		}
 	}
 	
+	public static final HashMap<String, Integer> TrainingPlan = new HashMap<String, Integer>() {
+		{
+			put("1", R.string.plan_01);
+			put("2", R.string.plan_02);
+			put("3", R.string.plan_03);
+			put("4", R.string.plan_04);
+			put("5", R.string.plan_05);
+			put("6", R.string.plan_06);
+			put("7", R.string.plan_07);
+			put("8", R.string.plan_08);
+			put("9", R.string.plan_09);
+			put("10", R.string.plan_10);
+			put("11", R.string.plan_11);
+			put("12", R.string.plan_12);
+			
+			put("15", R.string.plan_36); // TBD
+			put("18", R.string.plan_36); // TBD
+			put("21", R.string.plan_36); // TBD
+			put("24", R.string.plan_36); // TBD
+			put("27", R.string.plan_36); // TBD
+			put("30", R.string.plan_36); // TBD
+			put("33", R.string.plan_36); // TBD
+			
+			put("36", R.string.plan_36);
+			put("39", R.string.plan_39);
+			put("42", R.string.plan_42);
+			put("45", R.string.plan_45);
+			put("48", R.string.plan_48);
+			put("51", R.string.plan_51);
+			put("54", R.string.plan_54);
+			put("57", R.string.plan_57);
+			put("60", R.string.plan_60);
+			put("63", R.string.plan_63);
+			put("66", R.string.plan_66);
+			put("69", R.string.plan_69);
+			put("72", R.string.plan_72);
+			put("75", R.string.plan_75);
+			put("78", R.string.plan_78);
+			put("81", R.string.plan_81);
+			
+			put("84", R.string.plan_81); // TBD
+		}
+	};
+	
 	private static final HashMap<String, Cases> TotalCases = new HashMap<String, Cases>() {
 		{
 	        put("1", new Cases(

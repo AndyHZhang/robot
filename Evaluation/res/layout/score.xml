@@ -16,7 +16,7 @@
 	    android:textColor="#006838"
 	    android:text="中国儿童多元智能发展测评软件" />
 	    
-		<TextView android:id="@+id/motion"
+		<TextView
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:textSize="25px"
@@ -28,9 +28,23 @@
 		    android:shadowRadius="1"
 		    android:shadowDx="2"
 		    android:shadowColor="#006838"
-			android:text="运动智能得分：" />
+			android:text="运动智能得分" />
 			
-		<TextView android:id="@+id/art"
+		<TextView android:id="@+id/motion"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="25px"
+		    android:layout_marginTop="100px"
+		    android:layout_marginLeft="260px"
+		    android:typeface="sans"
+		    android:textStyle="bold"
+		    android:textColor="#FFFFFF"
+		    android:shadowRadius="1"
+		    android:shadowDx="2"
+		    android:shadowColor="#006838"
+			android:text="：" />
+			
+		<TextView 
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:textSize="25px"
@@ -42,9 +56,23 @@
 		    android:shadowRadius="1"
 		    android:shadowDx="2"
 		    android:shadowColor="#006838"
-			android:text="艺术智能得分：" />
+			android:text="艺术智能得分" />
 			
-		<TextView android:id="@+id/cognitive"
+		<TextView android:id="@+id/art"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="25px"
+		    android:layout_marginTop="140px"
+		    android:layout_marginLeft="260px"
+		    android:typeface="sans"
+		    android:textStyle="bold"
+		    android:textColor="#FFFFFF"
+		    android:shadowRadius="1"
+		    android:shadowDx="2"
+		    android:shadowColor="#006838"
+			android:text="：" />
+			
+		<TextView 
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:textSize="25px"
@@ -56,9 +84,23 @@
 		    android:shadowRadius="1"
 		    android:shadowDx="2"
 		    android:shadowColor="#006838"
-			android:text="认知智能得分：" />
+			android:text="认知智能得分" />
 			
-		<TextView android:id="@+id/speak"
+		<TextView android:id="@+id/cognitive"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="25px"
+		    android:layout_marginTop="180px"
+		    android:layout_marginLeft="260px"
+		    android:typeface="sans"
+		    android:textStyle="bold"
+		    android:textColor="#FFFFFF"
+		    android:shadowRadius="1"
+		    android:shadowDx="2"
+		    android:shadowColor="#006838"
+			android:text="：" />
+			
+		<TextView 
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:textSize="25px"
@@ -70,9 +112,23 @@
 		    android:shadowRadius="1"
 		    android:shadowDx="2"
 		    android:shadowColor="#006838"
-			android:text="语言智能得分：" />
+			android:text="语言智能得分" />
 			
-		<TextView android:id="@+id/eq"
+		<TextView android:id="@+id/speak"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="25px"
+		    android:layout_marginTop="220px"
+		    android:layout_marginLeft="260px"
+		    android:typeface="sans"
+		    android:textStyle="bold"
+		    android:textColor="#FFFFFF"
+		    android:shadowRadius="1"
+		    android:shadowDx="2"
+		    android:shadowColor="#006838"
+			android:text="：" />
+			
+		<TextView 
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:textSize="25px"
@@ -84,9 +140,23 @@
 		    android:shadowRadius="1"
 		    android:shadowDx="2"
 		    android:shadowColor="#006838"
-			android:text="情商智能得分：" />
+			android:text="情商智能得分" />
 			
-		<TextView android:id="@+id/score"
+		<TextView android:id="@+id/eq"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="25px"
+		    android:layout_marginTop="260px"
+		    android:layout_marginLeft="260px"
+		    android:typeface="sans"
+		    android:textStyle="bold"
+		    android:textColor="#FFFFFF"
+		    android:shadowRadius="1"
+		    android:shadowDx="2"
+		    android:shadowColor="#006838"
+			android:text="：" />
+			
+		<TextView 
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:textSize="25px"
@@ -98,12 +168,26 @@
 		    android:shadowRadius="1"
 		    android:shadowDx="2"
 		    android:shadowColor="#006838"
-			android:text="发育商得分：" />
+			android:text="发育商得分" />
+			
+		<TextView android:id="@+id/score"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="25px"
+		    android:layout_marginTop="300px"
+		    android:layout_marginLeft="260px"
+		    android:typeface="sans"
+		    android:textStyle="bold"
+		    android:textColor="#FFFFFF"
+		    android:shadowRadius="1"
+		    android:shadowDx="2"
+		    android:shadowColor="#006838"
+			android:text="：" />
 			
 		<Button android:id="@+id/training_plan"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:layout_marginTop="400px"
 		    android:layout_marginLeft="400px"
-		    android:text="教育方案" />
+		    android:background="@drawable/training_btn" />
 </RelativeLayout>

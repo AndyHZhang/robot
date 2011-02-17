@@ -132,6 +132,7 @@ public class Evaluation extends TabActivity {
 		
 		sCurrentMonthAge = getIntent().getIntExtra(Const.ACTION_MONTH_AGE, 0);
 		Toast.makeText(this, "当前月龄为" + Integer.toString(sCurrentMonthAge), 3000).show();
+		if (sCurrentMonthAge == 0) sCurrentMonthAge = 1;
 		mStartMonthAge = getStartMonthAge(sCurrentMonthAge);
 
 		Intent i = new Intent(this, ActivityCaseMotion.class);

@@ -19,6 +19,6 @@
         <activity android:name=".CoursePlayer" android:screenOrientation="landscape"/>
 
     </application>
-
+	<uses-sdk android:minSdkVersion="4" />
 
 </manifest> 

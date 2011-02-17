@@ -15,7 +15,6 @@
 	    android:textColor="#FFFFFF"
 	    android:shadowRadius="1"
 	    android:shadowDx="2"
-	    android:shadowColor="#006838"
-		android:text="@string/plan_01" />
+	    android:shadowColor="#006838" />
 		
 </ScrollView>
