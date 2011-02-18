@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout android:id="@+id/b"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal">
+		<ScrollView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+		    <RadioGroup
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:checkedButton="@+id/channel_btn"
+		        android:id="@+id/channel">
+		        <RadioButton android:text="Channel 1: 2.412 MHz" android:id="@+id/channel_1" />
+		        <RadioButton android:text="Channel 2: 2.417 MHz" android:id="@+id/channel_2" />
+		        <RadioButton android:text="Channel 3: 2.422 Mhz" android:id="@+id/channel_3" />
+		        <RadioButton android:text="Channel 4: 2.427 Mhz " android:id="@+id/channel_4" />
+		        <RadioButton android:text="Channel 5: 2.432 Mhz " android:id="@+id/channel_5" />
+		        <RadioButton android:text="Channel 6: 2.437 Mhz " android:id="@+id/channel_6" />
+		        <RadioButton android:text="Channel 7: 2.442 Mhz " android:id="@+id/channel_7" />
+		        <RadioButton android:text="Channel 8: 2.447 Mhz " android:id="@+id/channel_8" />
+		        <RadioButton android:text="Channel 9: 2.452 Mhz" android:id="@+id/channel_9" />
+		        <RadioButton android:text="Channel 10: 2.457 MHz " android:id="@+id/channel_10" />
+		        <RadioButton android:text="Channel 11: 2.462 MHz " android:id="@+id/channel_11" />
+		        <RadioButton android:text="Channel 12: 2.467 MHz " android:id="@+id/channel_12" />
+		        <RadioButton android:text="Channel 13: 2.472 MHz " android:id="@+id/channel_13" />
+		        <RadioButton android:text="Channel 14: 2.477 MHz" android:id="@+id/channel_14" />
+		    </RadioGroup>
+		</ScrollView>
+		<RadioGroup
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:checkedButton="@+id/frequency_btn"
+		    android:id="@+id/frequency">
+		    <RadioButton android:text="1 Mbps" android:id="@+id/frequency_1" />
+		    <RadioButton android:text="2 Mbps" android:id="@+id/frequency_2" />
+		    <RadioButton android:text="5.5 Mbps" android:id="@+id/frequency_5_5" />
+		    <RadioButton android:text="11 Mbps" android:id="@+id/frequency_11" />
+		</RadioGroup>
+		<LinearLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="开始发射"
+		        android:id="@+id/send_begin" />
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="停止发射"
+		        android:id="@+id/send_stop" />
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="开始接收"
+		        android:id="@+id/receive_begin" />
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="停止接收"
+		        android:id="@+id/receive_stop" />
+	    </LinearLayout>
+	    
+	</LinearLayout>
+
+    <LinearLayout android:id="@+id/g"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal">
+		<ScrollView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+		    <RadioGroup
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:checkedButton="@+id/channel_btn"
+		        android:id="@+id/channel">
+		        <RadioButton android:text="Channel 1: 2.412 MHz" android:id="@+id/channel_1" />
+		        <RadioButton android:text="Channel 2: 2.417 MHz" android:id="@+id/channel_2" />
+		        <RadioButton android:text="Channel 3: 2.422 Mhz" android:id="@+id/channel_3" />
+		        <RadioButton android:text="Channel 4: 2.427 Mhz " android:id="@+id/channel_4" />
+		        <RadioButton android:text="Channel 5: 2.432 Mhz " android:id="@+id/channel_5" />
+		        <RadioButton android:text="Channel 6: 2.437 Mhz " android:id="@+id/channel_6" />
+		        <RadioButton android:text="Channel 7: 2.442 Mhz " android:id="@+id/channel_7" />
+		        <RadioButton android:text="Channel 8: 2.447 Mhz " android:id="@+id/channel_8" />
+		        <RadioButton android:text="Channel 9: 2.452 Mhz" android:id="@+id/channel_9" />
+		        <RadioButton android:text="Channel 10: 2.457 MHz " android:id="@+id/channel_10" />
+		        <RadioButton android:text="Channel 11: 2.462 MHz " android:id="@+id/channel_11" />
+		        <RadioButton android:text="Channel 12: 2.467 MHz " android:id="@+id/channel_12" />
+		        <RadioButton android:text="Channel 13: 2.472 MHz " android:id="@+id/channel_13" />
+		        <RadioButton android:text="Channel 14: 2.477 MHz" android:id="@+id/channel_14" />
+		    </RadioGroup>
+		</ScrollView>
+		<ScrollView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+			<RadioGroup
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:checkedButton="@+id/g_frequency_btn"
+			    android:id="@+id/frequency">
+			    <RadioButton android:text="6 Mbps" android:id="@+id/frequency_6" />
+			    <RadioButton android:text="9 Mbps" android:id="@+id/frequency_9" />
+			    <RadioButton android:text="12 Mbps" android:id="@+id/frequency_12" />
+			    <RadioButton android:text="18 Mbps" android:id="@+id/frequency_18" />
+			    <RadioButton android:text="24 Mbps" android:id="@+id/frequency_24" />
+			    <RadioButton android:text="36 Mbps" android:id="@+id/frequency_36" />
+			    <RadioButton android:text="48 Mbps" android:id="@+id/frequency_48" />
+			    <RadioButton android:text="54 Mbps" android:id="@+id/frequency_54" />
+			</RadioGroup>
+		</ScrollView>
+		<LinearLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="开始发射"
+		        android:id="@+id/send_begin" />
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="停止发射"
+		        android:id="@+id/send_stop" />
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="开始接收"
+		        android:id="@+id/receive_begin" />
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="停止接收"
+		        android:id="@+id/receive_stop" />
+	    </LinearLayout>
+	    
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/manual"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+	    
+	    <EditText android:id="@+id/cmd"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" />
+	        
+	    <Button android:id="@+id/send"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Send" />
+	        
+	</LinearLayout>
+
+</FrameLayout>
