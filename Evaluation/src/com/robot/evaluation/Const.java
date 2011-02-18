@@ -76,13 +76,13 @@ public class Const {
 			put("11", R.string.plan_11);
 			put("12", R.string.plan_12);
 			
-			put("15", R.string.plan_36); // TBD
-			put("18", R.string.plan_36); // TBD
-			put("21", R.string.plan_36); // TBD
-			put("24", R.string.plan_36); // TBD
-			put("27", R.string.plan_36); // TBD
-			put("30", R.string.plan_36); // TBD
-			put("33", R.string.plan_36); // TBD
+			put("15", R.string.plan_15); // TBD
+			put("18", R.string.plan_18); // TBD
+			put("21", R.string.plan_21); // TBD
+			put("24", R.string.plan_24); // TBD
+			put("27", R.string.plan_27); // TBD
+			put("30", R.string.plan_30); // TBD
+			put("33", R.string.plan_33); // TBD
 			
 			put("36", R.string.plan_36);
 			put("39", R.string.plan_39);
@@ -101,7 +101,7 @@ public class Const {
 			put("78", R.string.plan_78);
 			put("81", R.string.plan_81);
 			
-			put("84", R.string.plan_81); // TBD
+			put("84", R.string.plan_84); // TBD
 		}
 	};
 	
