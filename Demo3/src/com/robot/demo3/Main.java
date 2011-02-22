@@ -200,14 +200,6 @@ public class Main extends ListActivity {
 
 		setListAdapter(adapter);
 		
-		IntentFilter filter = new IntentFilter("com.robot.rm.MCU_CMD");
-		r = new BroadcastReceiver() {
-			public void onReceive(Context context, Intent intent) {
-				clean();
-			}
-		};
-		registerReceiver(r, filter);
-		
 		/*
 		getListView().setOnCreateContextMenuListener(new OnCreateContextMenuListener() {
 			public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
@@ -233,8 +225,8 @@ public class Main extends ListActivity {
 	}
 	
 	@Override
-	public void onDestroy() {
-		super.onDestroy();
+	public void onStop() {
+		super.onStop();
 		
 		clean();
 		closeEngine();
@@ -270,6 +262,14 @@ public class Main extends ListActivity {
 			}
 			mCursor.close();
 		}
+		
+		IntentFilter filter = new IntentFilter("com.robot.rm.MCU_CMD");
+		r = new BroadcastReceiver() {
+			public void onReceive(Context context, Intent intent) {
+				clean();
+			}
+		};
+		registerReceiver(r, filter);
 	}
 	
 	@Override

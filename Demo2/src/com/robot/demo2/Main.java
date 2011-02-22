@@ -176,8 +176,8 @@ public class Main extends Activity {
     }
     
     @Override
-    public void onDestroy() {
-    	super.onDestroy();
+    public void onStop() {
+    	super.onStop();
     	
 		clean();
     	closeEngine();
