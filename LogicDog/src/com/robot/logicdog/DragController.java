@@ -18,16 +18,28 @@ public class DragController {
 	private Context mContext;
 
 	private DragView mDragView;
-	
-	private View mMoveTarget;
 
 	private int mMotionDownX, mMotionDownY;
 	
 	private boolean mDragging;
+	
+	private DragListener mListener;
+	
+	interface DragListener {
+		public void onDrop(int dropX, int dropY);
+	}
 
 	public DragController(Context context) {
 		mContext = context;
 	}
+	
+	public void setDragListener(DragListener l) {
+        mListener = l;
+    }
+	
+	public void removeDragListener(DragListener l) {
+        mListener = null;
+    }
 
 	public void startDrag(View v) {
 
@@ -46,10 +58,6 @@ public class DragController {
 			mDragView.show(mMotionDownX, mMotionDownY);
 		}
 	}
-	
-	void setMoveTarget(View view) {
-        mMoveTarget = view;
-    }
 
 	public boolean onnterceptTouchEvent(MotionEvent ev) {
 		final int action = ev.getAction();
@@ -87,6 +95,10 @@ public class DragController {
 				mDragView.remove();
 				mDragView = null;
 				
+				if (mListener != null) {
+					mListener.onDrop(screenX, screenY);
+				}
+				
 				mDragging = false;
 			}
 			break;
@@ -123,12 +135,5 @@ public class DragController {
 		v.setDrawingCacheBackgroundColor(color);
 
 		return bitmap;
-	}
-	
-	private void drop(int x, int y) {
-		if (mMoveTarget != null) {
-			mMoveTarget.setLayoutParams(mDragView.getLayoutParams());
-			mMoveTarget.setBackgroundDrawable(mDragView.getBackground());
-		}
 	}
 }
