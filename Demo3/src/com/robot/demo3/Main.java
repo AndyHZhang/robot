@@ -108,7 +108,7 @@ public class Main extends ListActivity {
     	
     	mVREngine.msrInitWithPenalty(0);
 		mVREngine.msrSetLogLevel(0);
-		mVocHandle = mVREngine.msrCreateVocabulary(4);
+		mVocHandle = mVREngine.msrCreateVocabulary(100);
 		mVREngine.msrOpen();
         
 		for (String s : mUserSpeakData) {
@@ -298,6 +298,7 @@ public class Main extends ListActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
     	switch (keyCode) {
     	case KeyEvent.KEYCODE_0:
+    	case KeyEvent.KEYCODE_VOLUME_DOWN:
     	case KeyEvent.KEYCODE_VOLUME_UP:
 			mDebug = true;
     	case KeyEvent.KEYCODE_SOFT_LEFT:
