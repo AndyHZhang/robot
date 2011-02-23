@@ -5,6 +5,7 @@ import java.util.Random;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,9 +26,11 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 	private DragController mDragController;
 
 	private View mDraggingView;
-	
+
 	private int mFinishCount;
 	private int mDBIndex;
+
+	private View mBackground;
 
 	private ImageView mImage01;
 	private ImageView mImage02;
@@ -50,6 +53,14 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 	private int[] mSourceIndex = new int[TEST_COUNT];
 	private int[] mTargetIndex = new int[TEST_COUNT];
 
+	private Handler mHandler = new Handler();
+
+	private Runnable mStartNextTest = new Runnable() {
+		public void run() {
+			nextTest(true);
+		}
+	};
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -64,31 +75,35 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 		mDragSourceList = getDragSourceList();
 		mDragTargetList = getDragTargetList();
 
-		prepareCourse();
-		
-		((Button) findViewById(R.id.up_btn)).setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				nextTest(false);
-			}
-		});
-		
-		((Button) findViewById(R.id.down_btn)).setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				nextTest(true);
-			}
-		});
+		mBackground = findViewById(R.id.background);
+
+		((Button) findViewById(R.id.up_btn))
+				.setOnClickListener(new OnClickListener() {
+					public void onClick(View v) {
+						nextTest(false);
+					}
+				});
+
+		((Button) findViewById(R.id.down_btn))
+				.setOnClickListener(new OnClickListener() {
+					public void onClick(View v) {
+						nextTest(true);
+					}
+				});
 	}
-	
+
 	private void nextTest(boolean next) {
 		if (next) {
 			mDBIndex++;
-			if (mDBIndex == Const.DB.length) mDBIndex = 0;
-			
+			if (mDBIndex == Const.DB.length)
+				mDBIndex = 0;
+
 		} else {
 			mDBIndex--;
-			if (mDBIndex < 0) mDBIndex = Const.DB.length - 1;
+			if (mDBIndex < 0)
+				mDBIndex = Const.DB.length - 1;
 		}
-		
+
 		prepareCourse();
 	}
 
@@ -97,6 +112,7 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 		super.onResume();
 
 		mDragController.setDragListener(this);
+		prepareCourse();
 	}
 
 	@Override
@@ -104,6 +120,8 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 		super.onStop();
 
 		mDragController.removeDragListener(this);
+		
+		mHandler.removeCallbacks(mStartNextTest);
 	}
 
 	public boolean onTouch(View v, MotionEvent ev) {
@@ -118,7 +136,8 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 			if (target.onDrop(mDraggingView)) {
 				mFinishCount--;
 				if (mFinishCount == 0) {
-					nextTest(true);
+					// nextTest(true);
+					mHandler.postDelayed(mStartNextTest, 1000);
 				}
 			}
 		}
@@ -172,7 +191,9 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 
 	private void prepareCourse() {
 		mFinishCount = TEST_COUNT;
-		
+
+		mBackground.setBackgroundResource(Const.BACKGROUND[mDBIndex]);
+
 		Random r = new Random(System.currentTimeMillis());
 		buildRandonIndex(mSourceIndex, r.nextLong());
 		buildRandonIndex(mTargetIndex, r.nextLong());
@@ -213,7 +234,7 @@ public class Main extends Activity implements DragListener, OnTouchListener {
 			int leftNumber = list.size();
 			int index = list.get(random.nextInt(leftNumber));
 			indexList[i] = index;
-			list.remove((Integer)index);
+			list.remove((Integer) index);
 		}
 	}
 }

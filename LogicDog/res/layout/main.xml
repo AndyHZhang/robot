@@ -5,10 +5,9 @@
     android:layout_height="fill_parent"
     android:background="#FFFFFF"
     >
-    <RelativeLayout
+    <RelativeLayout android:id="@+id/background"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/bg01"
         >
         <com.robot.logicdog.DragTargetView android:id="@+id/target_01"
             android:layout_marginLeft="@dimen/target_left"

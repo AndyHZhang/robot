@@ -16,7 +16,7 @@ public class Const {
 		}
 	}
 	
-	static final int[] DB_Background = {
+	static final int[] BACKGROUND = {
 		R.drawable.bg01,
 		R.drawable.bg02,
 	};
