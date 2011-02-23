@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="target_width">247px</dimen>
+    <dimen name="target_height">195px</dimen>
+    <dimen name="target_left">59px</dimen>
+    <dimen name="target_top">0px</dimen>
+    <dimen name="source_width">123px</dimen>
+    <dimen name="source_height">90px</dimen>
+    <dimen name="source_left">62px</dimen>
+    <dimen name="source_top">390px</dimen>
+</resources>

@@ -80,8 +80,6 @@ public class DragController {
 		final int screenX = (int) ev.getRawX();
 		final int screenY = (int) ev.getRawY();
 
-		Log.d(TAG, "x = " + screenX + ", y = " + screenY);
-
 		switch (action) {
 		case MotionEvent.ACTION_DOWN:
 			break;
