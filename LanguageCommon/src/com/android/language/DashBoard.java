@@ -3,7 +3,11 @@ package com.android.language;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -37,6 +41,14 @@ public class DashBoard extends Activity implements OnCheckedChangeListener {
 		mLF.setOnCheckedChangeListener(this);
 		mLS.setOnCheckedChangeListener(this);
 		mLI.setOnCheckedChangeListener(this);
+
+		Button btn = (Button) findViewById(R.id.start);
+		btn.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				finish();
+				startActivity(new Intent(DashBoard.this, Selector.class));
+			}
+		});
 
 		mSelectedLanguage = new ArrayList<CheckBox>();
 	}
