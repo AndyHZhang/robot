@@ -1,6 +1,7 @@
 package com.android.language;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,11 @@ public class Selector extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setAdapter(new CourseAdapter());
+		setOnCourseSelectorListener(new OnCourseSelectorListener() {
+			public void onCourseSelector(int position) {
+				startActivity(new Intent(Selector.this, Player.class));
+			}
+		});
 	}
 
 	public interface OnCourseSelectorListener {
@@ -48,14 +54,18 @@ public class Selector extends Activity {
 		}
 	}
 
+	private static final int[] CourseImage = { R.drawable.course01,
+			R.drawable.course02, R.drawable.course03, R.drawable.course04,
+			R.drawable.course05 };
+
 	private class CourseAdapter extends BaseAdapter {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			ImageView i;
 
 			if (convertView == null) {
 				i = new ImageView(Selector.this);
-				i.setImageResource(R.drawable.course01);
-				//i.setScaleType(ImageView.ScaleType.CENTER);
+				i.setImageResource(CourseImage[position]);
+				i.setScaleType(ImageView.ScaleType.CENTER);
 				i.setLayoutParams(new Gallery.LayoutParams(400, 300));
 			} else {
 				i = (ImageView) convertView;

@@ -17,6 +17,7 @@
         </activity>
         
         <activity android:name=".Selector" android:screenOrientation="landscape" />
+        <activity android:name=".Player" android:screenOrientation="landscape" />
 
     </application>
 </manifest>

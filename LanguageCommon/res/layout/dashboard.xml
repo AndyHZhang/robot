@@ -2,116 +2,117 @@
 <RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
-  android:layout_height="fill_parent">
+  android:layout_height="fill_parent"
+  android:background="@drawable/background">
   <CheckBox android:id="@+id/language_chinese"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="100px"
-    android:layout_marginTop="10px"
+    android:layout_marginTop="40px"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/language_chinese"
     android:layout_alignTop="@id/language_chinese"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="Chinese"
+    android:src="@drawable/chinese"
     />
   <CheckBox android:id="@+id/language_english"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30px"
+    android:layout_marginTop="20px"
     android:layout_below="@id/language_chinese"
     android:layout_alignLeft="@id/language_chinese"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/language_english"
     android:layout_alignTop="@id/language_english"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="English"
+    android:src="@drawable/english"
     />
   <CheckBox android:id="@+id/language_japanese"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30px"
+    android:layout_marginTop="20px"
     android:layout_below="@id/language_english"
     android:layout_alignLeft="@id/language_english"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/language_japanese"
     android:layout_alignTop="@id/language_japanese"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="Japanese"
+    android:src="@drawable/japanese"
     />
   <CheckBox android:id="@+id/language_french"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30px"
+    android:layout_marginTop="20px"
     android:layout_below="@id/language_japanese"
     android:layout_alignLeft="@id/language_japanese"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/language_french"
     android:layout_alignTop="@id/language_french"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="French"
+    android:src="@drawable/french"
     />
   <CheckBox android:id="@+id/language_spanish"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30px"
+    android:layout_marginTop="20px"
     android:layout_below="@id/language_french"
     android:layout_alignLeft="@id/language_french"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/language_spanish"
     android:layout_alignTop="@id/language_spanish"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="Spanish"
+    android:src="@drawable/spanish"
     />
   <CheckBox android:id="@+id/language_italian"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30px"
+    android:layout_marginTop="20px"
     android:layout_below="@id/language_spanish"
     android:layout_alignLeft="@id/language_spanish"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/language_italian"
     android:layout_alignTop="@id/language_italian"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="Italian"
+    android:src="@drawable/italian"
     />
   <CheckBox android:id="@+id/show_text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="400px"
-    android:layout_marginTop="50px"
+    android:layout_marginLeft="450px"
+    android:layout_marginTop="150px"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/show_text"
     android:layout_alignTop="@id/show_text"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="Text"
+    android:src="@drawable/text"
     />
   <CheckBox android:id="@+id/show_image"
     android:layout_width="wrap_content"
@@ -119,15 +120,15 @@
     android:layout_marginTop="30px"
     android:layout_below="@id/show_text"
     android:layout_alignLeft="@id/show_text"
+    android:button="@drawable/checkbox_style"
     />
-  <TextView 
+  <ImageView 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/show_image"
     android:layout_alignTop="@id/show_image"
     android:layout_marginLeft="30px"
-    android:textSize="50px"
-    android:text="Image"
+    android:src="@drawable/image"
     />
   <Button android:id="@+id/start"
     android:layout_width="wrap_content"
