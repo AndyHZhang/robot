@@ -40,7 +40,6 @@ public class Player extends Activity implements ViewFactory {
 		setContentView(R.layout.player);
 
 		mSwitcher = (ImageSwitcher) findViewById(R.id.show_image);
-		// 系统的anim中的fade_in.xml
 		mSwitcher.setFactory(this);
 		mSwitcher.setInAnimation(AnimationUtils.loadAnimation(this,
 				android.R.anim.fade_in));

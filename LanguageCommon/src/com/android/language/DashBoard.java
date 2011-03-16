@@ -19,6 +19,9 @@ public class DashBoard extends Activity implements OnCheckedChangeListener {
 	private CheckBox mLF;
 	private CheckBox mLS;
 	private CheckBox mLI;
+	
+	private CheckBox mText;
+	private CheckBox mImage;
 
 	private ArrayList<CheckBox> mSelectedLanguage;
 
@@ -27,6 +30,8 @@ public class DashBoard extends Activity implements OnCheckedChangeListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dashboard);
+		
+		UserChoice.init();
 
 		mLC = (CheckBox) findViewById(R.id.language_chinese);
 		mLE = (CheckBox) findViewById(R.id.language_english);
@@ -34,6 +39,9 @@ public class DashBoard extends Activity implements OnCheckedChangeListener {
 		mLF = (CheckBox) findViewById(R.id.language_french);
 		mLS = (CheckBox) findViewById(R.id.language_spanish);
 		mLI = (CheckBox) findViewById(R.id.language_italian);
+		
+		mText = (CheckBox) findViewById(R.id.show_text);
+		mImage = (CheckBox) findViewById(R.id.show_image);
 
 		mLC.setOnCheckedChangeListener(this);
 		mLE.setOnCheckedChangeListener(this);
@@ -62,5 +70,17 @@ public class DashBoard extends Activity implements OnCheckedChangeListener {
 		} else {
 			mSelectedLanguage.remove(buttonView);
 		}
+	}
+	
+	private void recordUserChoice() {
+		UserChoice.bChineseSelected = mLC.isChecked();
+		UserChoice.bEnglishSelected = mLE.isChecked();
+		UserChoice.bJapaneseSelected = mLJ.isChecked();
+		UserChoice.bFrenchSelected = mLF.isChecked();
+		UserChoice.bSpanishSelected = mLS.isChecked();
+		UserChoice.bItalianSelected = mLI.isChecked();
+		
+		UserChoice.bTextSelected = mText.isChecked();
+		UserChoice.bImageSelected = mImage.isChecked();
 	}
 }
