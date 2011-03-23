@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/login_bg">
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20px"
+    android:layout_marginTop="30px"
+    android:gravity="center_horizontal"
+    android:typeface="sans"
+    android:textColor="#006838"
+    android:text="中国●北京 华夏英杰教育科学研究院儿童早期教育研究所" />
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="50px"
+    android:layout_marginTop="80px"
+    android:gravity="center_horizontal"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:text="0~6岁婴幼儿" />
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="50px"
+    android:layout_marginTop="160px"
+    android:gravity="center_horizontal"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:text="体格智能情商发展测试评价系统" />
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20px"
+    android:layout_marginTop="240px"
+    android:gravity="center_horizontal"
+    android:typeface="sans"
+    android:textColor="#006838"
+    android:text="请输入测试编号" />
+  <EditText android:id="@+id/evaluation_no"
+    android:layout_width="300px"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:layout_marginTop="280px"
+    android:layout_centerHorizontal="true" />
+  <Button android:id="@+id/enter_or_exit"
+    android:textSize="20px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:layout_marginTop="350px"
+    android:layout_marginLeft="600px"
+    android:text="请按此进入或取消" />
+</RelativeLayout>
