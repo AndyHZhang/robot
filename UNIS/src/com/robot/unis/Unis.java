@@ -90,6 +90,7 @@ public class Unis extends Activity {
 					}
 					for (index = 0; index < mAppSpeakData.size(); index++) {
 						if (str.startsWith(mAppSpeakData.get(index)) == true) {
+							displayImage(mAppDataInfos.get(index).getImage());
 							playSound(mAppDataInfos.get(index).getSound());
 							startAction(mAppDataInfos.get(index).getAction());
 							break;
@@ -239,6 +240,14 @@ public class Unis extends Activity {
 		
 		Intent recognizedIntent = new Intent("com.robot.START_RECORDER");
 		sendBroadcast(recognizedIntent);
+    }
+    
+    private void displayImage(String str) {
+    	if (((File) new File(str.replace("file://", ""))).exists() == false) {
+			Toast.makeText(this, "can't find " + str.replace("file://", ""), Toast.LENGTH_LONG).show();
+			return;
+		}
+    	mBackground.setImageURI(Uri.parse(str));
     }
     
     private void playSound(String str) {

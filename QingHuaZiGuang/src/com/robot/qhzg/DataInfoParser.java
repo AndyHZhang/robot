@@ -14,6 +14,7 @@ import org.w3c.dom.NodeList;
 
 public class DataInfoParser {
 	static final String DATA = "Data";
+	static final String IMAGE = "Image";
 	static final String STRING = "String";
 	static final String SOUND = "Sound";
 	static final String ACTION = "Action";
@@ -34,6 +35,7 @@ public class DataInfoParser {
 			NodeList items = root.getElementsByTagName(DATA);
 			for (int i = 0; i < items.getLength(); i++) {
 				String string = null;
+				String image = null;
 				String sound = null;
 				short action = 0;
 				Node item = items.item(i);
@@ -43,6 +45,8 @@ public class DataInfoParser {
 					String name = property.getNodeName();
 					if (name.equalsIgnoreCase(STRING)) {
 						string = property.getFirstChild().getNodeValue();
+					} else if (name.equalsIgnoreCase(IMAGE)) {
+						image = property.getFirstChild().getNodeValue();
 					} else if (name.equalsIgnoreCase(SOUND)) {
 						sound = property.getFirstChild().getNodeValue();
 					} else if (name.equalsIgnoreCase(ACTION)) {
@@ -52,7 +56,7 @@ public class DataInfoParser {
 						action = Short.parseShort(str, 16);
 					}
 				}
-				dataInfos.add(new DataInfo(string, sound, action));
+				dataInfos.add(new DataInfo(string, image, sound, action));
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
