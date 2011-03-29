@@ -7,12 +7,19 @@
     	android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
     	
     	<activity android:name=".Welcome" android:label="@string/app_name" 
+    	    android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
     	    android:screenOrientation="landscape">
     	    <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
     	</activity>
+    	
+    	<activity android:name=".InputEvaulationNumber" android:screenOrientation="landscape" />
+    	<activity android:name=".InputChildInformation" android:screenOrientation="landscape" />
+    	<activity android:name=".InputParentInformation" android:screenOrientation="landscape" />
+    	<activity android:name=".InputGrowInformation" android:screenOrientation="landscape" />
     	
     	<activity android:name=".Login" android:screenOrientation="landscape" />
 		<activity android:name=".Evaluation" android:screenOrientation="landscape" />

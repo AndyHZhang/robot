@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/login_bg">
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="25px"
+    android:layout_marginTop="30px"
+    android:gravity="center_horizontal"
+    android:typeface="sans"
+    android:textColor="#006838"
+    android:textStyle="bold"
+    android:text="0~6岁婴幼儿体格智能情商发展测试评价系统" />
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20px"
+    android:layout_marginTop="70px"
+    android:layout_marginLeft="30px"
+    android:typeface="sans"
+    android:textColor="#006838"
+    android:text="请输入宝宝档案：" />
+  <LinearLayout android:id="@+id/first_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="120px"
+    android:layout_marginLeft="80px">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="姓名：" />
+    <EditText android:id="@+id/child_name"
+      android:layout_marginLeft="50px"
+      android:layout_width="200px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:layout_marginLeft="40px"
+      android:text="性别：" />
+    <RadioGroup android:id="@+id/gender"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >
+      <RadioButton android:id="@+id/boy"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:textSize="25px"
+        android:typeface="sans"
+        android:textColor="#006838"
+        android:text="男" />
+      <RadioButton android:id="@+id/girl"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:textSize="25px"
+        android:typeface="sans"
+        android:textColor="#006838"
+        android:text="女" />
+      </RadioGroup>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/second_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/first_line"
+    android:layout_alignLeft="@id/first_line">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="出生时间：" />
+    <EditText android:id="@+id/birth_year"
+      android:layout_width="200px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="年" />
+    <EditText android:id="@+id/birth_month"
+      android:layout_width="100px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="月" />
+    <EditText android:id="@+id/birth_day"
+      android:layout_width="100px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="日" />
+  </LinearLayout>
+  <LinearLayout android:id="@+id/third_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/second_line"
+    android:layout_alignLeft="@id/second_line">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="实际年龄" />
+    <EditText android:id="@+id/age_in_days"
+      android:layout_marginLeft="25px"
+      android:layout_width="200px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="天" />
+    <TextView 
+      android:layout_marginLeft="70px"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="第" />
+    <EditText android:id="@+id/evaluation_count"
+      android:layout_width="80px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="次评测" />
+  </LinearLayout>
+  <LinearLayout android:id="@+id/forth_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/third_line"
+    android:layout_alignLeft="@id/third_line">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="测试时间：" />
+    <EditText android:id="@+id/evaluation_year"
+      android:layout_width="200px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="年" />
+    <EditText android:id="@+id/evaluation_month"
+      android:layout_width="100px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="月" />
+    <EditText android:id="@+id/evaluation_day"
+      android:layout_width="100px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:editable="false"
+      android:focusable="false" />
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="日" />
+  </LinearLayout>
+  <Button android:id="@+id/enter_or_exit"
+    android:textSize="20px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:layout_marginTop="350px"
+    android:layout_marginLeft="600px"
+    android:text="请按此进入或取消" />
+</RelativeLayout>

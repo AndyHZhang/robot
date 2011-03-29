@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/login_bg">
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="25px"
+    android:layout_marginTop="30px"
+    android:gravity="center_horizontal"
+    android:typeface="sans"
+    android:textColor="#006838"
+    android:textStyle="bold"
+    android:text="0~6岁婴幼儿体格智能情商发展测试评价系统" />
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20px"
+    android:layout_marginTop="70px"
+    android:layout_marginLeft="30px"
+    android:typeface="sans"
+    android:textColor="#006838"
+    android:text="请输入宝宝发育档案：" />
+  <LinearLayout android:id="@+id/first_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="120px"
+    android:layout_marginLeft="160px">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="体重：" />
+    <EditText android:id="@+id/weight"
+      android:layout_width="300px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+  </LinearLayout>
+  <LinearLayout android:id="@+id/second_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/first_line"
+    android:layout_alignLeft="@id/first_line">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="身长：" />
+    <EditText android:id="@+id/height"
+      android:layout_width="300px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+  </LinearLayout>
+  <LinearLayout android:id="@+id/third_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/second_line"
+    android:layout_alignLeft="@id/second_line">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="头围：" />
+    <EditText android:id="@+id/head"
+      android:layout_width="300px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+  </LinearLayout>
+  <LinearLayout android:id="@+id/forth_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/third_line"
+    android:layout_alignLeft="@id/third_line">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="胸围：" />
+    <EditText android:id="@+id/bust"
+      android:layout_width="300px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+  </LinearLayout>
+  <LinearLayout android:id="@+id/fifth_line"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/forth_line"
+    android:layout_alignLeft="@id/forth_line">
+    <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="牙数：" />
+    <EditText android:id="@+id/teeth"
+      android:layout_width="300px"
+      android:layout_height="wrap_content"
+      android:textSize="25px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+  </LinearLayout>
+  <Button android:id="@+id/enter_or_exit"
+    android:textSize="20px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:layout_marginTop="400px"
+    android:layout_marginLeft="600px"
+    android:text="请按此进入或取消" />
+</RelativeLayout>
