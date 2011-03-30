@@ -43,9 +43,6 @@ public class RecordData {
 	public static String birth_day;
 	public static int age_in_days; // need calculate
 	public static int evaluation_count; // need refresh everytime login
-	public static int evaluation_year; // need refresh everytime login
-	public static int evaulation_month; // need refresh everytime login
-	public static int evaulation_day; // need refresh everytime login
 
 	public static String motherName;
 	public static String motherJob;

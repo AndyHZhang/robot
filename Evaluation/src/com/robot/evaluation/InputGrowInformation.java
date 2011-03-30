@@ -35,6 +35,10 @@ public class InputGrowInformation extends Activity {
 			mEnter.setOnClickListener(new OnClickListener() {
 				public void onClick(View v) {
 					saveUserInput();
+					
+					// we should save all user data here
+					// because it's the last activity request user information
+					RecordData.save(InputGrowInformation.this);
 
 					finish();
 

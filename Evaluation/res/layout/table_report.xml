@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent" 
+  android:layout_height="fill_parent"
+  android:scrollbars="vertical" 
+  android:fadingEdge="vertical"
+  android:background="@drawable/login_bg">
+  
+  <LinearLayout 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+  <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="30px"
+    android:layout_marginTop="10px"
+    android:gravity="center_horizontal"
+    android:typeface="sans"
+    android:textColor="#006838"
+    android:textStyle="bold"
+    android:text="华夏英杰0~6岁婴幼儿身心发展测评报告单" />
+    
+  <LinearLayout android:layout_width="780px" android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" >
+    <TextView 
+      android:layout_width="0px"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:textSize="20px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="测评编号：" />
+    <TextView android:id="@+id/evalulation_no"
+      android:layout_width="0px"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:textSize="20px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+    <TextView 
+      android:layout_width="0px"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:textSize="20px"
+      android:typeface="sans"
+      android:textColor="#006838"
+      android:text="测评日期：" />
+    <TextView android:id="@+id/evaluation_date"
+      android:layout_width="0px"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:textSize="20px"
+      android:typeface="sans"
+      android:textColor="#006838" />
+  </LinearLayout>
+      
+  <TableLayout
+    android:layout_width="770px"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" >
+    
+    <TableRow>
+        <TextView android:layout_column="0" android:width="2px" />
+        <TextView android:layout_column="2" android:width="2px" />
+        <TextView android:layout_column="4" android:width="2px" />
+        <TextView android:layout_column="6" android:width="2px" />
+        <TextView android:layout_column="8" android:width="2px" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+   
+    <TableRow>
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="宝宝姓名" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838"/>
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/child_name"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838"/>
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="性别"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838"/>
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/gender"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838"/>
+      <View android:layout_height="35px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="出生日期" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/birthday"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="月龄" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/age_in_month"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="妈妈姓名" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/mother_name"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="联系电话" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/mother_phone"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="爸爸姓名" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/father_name"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:text="联系电话" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+      <TextView android:id="@+id/father_phone"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="35px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+
+  </TableLayout>
+  
+  <TableLayout
+    android:layout_width="770px"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-20px"
+    android:layout_gravity="center_horizontal" >
+    
+    <TableRow>
+        <TextView android:layout_column="0" android:width="2px" />
+        <TextView android:layout_column="2" android:width="2px" />
+        <TextView android:layout_column="4" android:width="2px" />
+        <TextView android:layout_column="6" android:width="2px" />
+    </TableRow>
+    
+    <TableRow>
+      <View android:layout_height="40px" android:background="#FF909090" />
+      <TextView android:text="测试项目" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textStyle="bold" android:textSize="25px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="40px" android:background="#FF909090" />
+      <TextView android:text="测试内容" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="382px"
+        android:textStyle="bold" android:textSize="25px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="40px" android:background="#FF909090" />
+      <TextView android:text="发展状况" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textStyle="bold" android:textSize="25px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="40px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:text="身体发育" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/body_test"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="382px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/body_result"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:text="大运动能力" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/motion_test"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="382px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/motion_result"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:text="精细动作" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/art_test"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="382px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/art_result"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:text="认知能力" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/cognitive_test"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="382px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/cognitive_result"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:text="语言发展" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/speak_test"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="382px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/speak_result"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <TableRow>
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:text="情绪与社会行为" 
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/eq_test"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="382px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+      <TextView android:id="@+id/eq_result"
+        android:layout_gravity="center" android:gravity="center" android:layout_width="190px"
+        android:textSize="20px" android:typeface="sans" android:textColor="#006838" />
+      <View android:layout_height="70px" android:background="#FF909090" />
+    </TableRow>
+    
+    <View android:layout_height="2px" android:background="#FF909090" />
+    
+    <View android:layout_height="30px" />
+    
+  </TableLayout>
+  
+  </LinearLayout>
+		
+</ScrollView>

@@ -18,7 +18,7 @@ public class Welcome extends Activity {
 			public void run() {
 				finish();
 				startActivity(new Intent(Welcome.this,
-						InputEvaulationNumber.class));
+						InputEvaulationNumber.class));	
 			}
 		}, 3000);
 	}
