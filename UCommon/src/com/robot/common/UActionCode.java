@@ -8,4 +8,6 @@ public class UActionCode {
 	public static final int DANCE_TYPE2 = 0X0041;
 	public static final int DANCE_TYPE3 = 0X0042;
 	public static final int WU_SHU = 0x0062;
+	
+	public static final int LOOK_UP = 0x000A;
 }
