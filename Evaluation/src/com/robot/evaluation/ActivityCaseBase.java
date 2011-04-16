@@ -16,6 +16,7 @@ public abstract class ActivityCaseBase extends Activity {
 	public static final String REPORT_SCORE = "com.robot.evaluation.next";
 	public static final String CATEGORY_TYPE = "com.robot.evaluation.type";
 	public static final String CATEGORY_SCORE = "com.robot.evaluation.score";
+	public static final String CATEGORY_MONTH_AGE = "com.robot.evaluation.month.age";
 	public static final String CATEGORY_START_MONTH_AGE = "com.robot.evaluation.start";
 	
 	protected TextView mTitleContent;
@@ -70,10 +71,12 @@ public abstract class ActivityCaseBase extends Activity {
 	
 	private void nextEvaluation() {
 		int score;
+		if (mActualMonthAge == 0) mActualMonthAge = Evaluation.getStartMonthAge(mCurrentMonthAge);
 		score = mActualMonthAge * 100 / mCurrentMonthAge;
 		Intent i = new Intent(REPORT_SCORE);
 		i.putExtra(CATEGORY_TYPE, getClass().getSimpleName());
 		i.putExtra(CATEGORY_SCORE, score);
+		i.putExtra(CATEGORY_MONTH_AGE, mActualMonthAge);
 		sendBroadcast(i);
 		
 		Log.d(TAG, "month age is " + mCurrentMonthAge + "," +

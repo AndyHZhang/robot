@@ -6,7 +6,7 @@ public class ActivityCaseArt extends ActivityCaseBase {
 	
 	public void refreshQuestion(int monthAge) {
 		
-		Cases cases = Const.getCases().get("" + monthAge);;
+		Cases cases = Const.getCases().get("" + monthAge);
 		
 		mTitleContent.setText(cases.mArtCase.mTitle);
 		mMethodContent.setText(cases.mArtCase.mMethod);

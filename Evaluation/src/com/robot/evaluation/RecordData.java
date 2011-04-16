@@ -63,6 +63,13 @@ public class RecordData {
 	public static float head;
 	public static float bust;
 	public static float teeth;
+	
+	// RAM Data, not record to file
+	public static int artMonthAge;
+	public static int cognitiveMonthAge;
+	public static int EQMonthAge;
+	public static int motionMonthAge;
+	public static int speakMonthAge;
 
 	public static void load(Context context, int i) {
 		SharedPreferences sp = getPreferences(context, i);

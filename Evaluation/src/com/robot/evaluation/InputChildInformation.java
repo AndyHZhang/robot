@@ -149,6 +149,8 @@ public class InputChildInformation extends Activity implements OnClickListener {
 		RecordData.birth_year = mBirthYear.getEditableText().toString();
 		RecordData.birth_month = mBirthMonth.getEditableText().toString();
 		RecordData.birth_day = mBirthDay.getEditableText().toString();
+	    
+		RecordData.age_in_days = Integer.parseInt(mAgeInDays.getEditableText().toString());
 	}
 
 }

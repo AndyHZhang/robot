@@ -21,14 +21,14 @@ public class InputGrowInformation extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.input_grow_information);
 
 		mWeight = (EditText) findViewById(R.id.weight);
 		mHeight = (EditText) findViewById(R.id.height);
 		mHead = (EditText) findViewById(R.id.head);
 		mBust = (EditText) findViewById(R.id.bust);
 		mTeeth = (EditText) findViewById(R.id.teeth);
-
-		setContentView(R.layout.input_grow_information);
 
 		mEnter = (Button) findViewById(R.id.enter_or_exit);
 		if (mEnter != null) {

@@ -63,7 +63,8 @@ public class Evaluation extends TabActivity {
 					public void onClick(DialogInterface dialog, int whichButton) {
 						finish();
 						
-						Intent i = new Intent(Evaluation.this, Score.class);
+						//Intent i = new Intent(Evaluation.this, Score.class);
+						Intent i = new Intent(Evaluation.this, TableReport.class);
 						i.putExtra(Score.SCORE_MOTION, mMotionScore);
 						i.putExtra(Score.SCORE_ART, mArtScore);
 						i.putExtra(Score.SCORE_COGNITIVE, mCognitiveScore);
@@ -89,23 +90,29 @@ public class Evaluation extends TabActivity {
 	private void recordScore(Intent intent) {
 		String type = intent.getStringExtra(ActivityCaseBase.CATEGORY_TYPE);
 		int score = intent.getIntExtra(ActivityCaseBase.CATEGORY_SCORE, 0);
+		int monthAge = intent.getIntExtra(ActivityCaseBase.CATEGORY_MONTH_AGE, 0);
 		score = (score > 200) ? 200 : score;
 		Log.d(TAG, "Evaluation got score " + score);
 		
 		if (ActivityCaseMotion.class.getSimpleName().equals(type)) {
 			mMotionScore = score;
+			RecordData.motionMonthAge = monthAge;
 		} else if (ActivityCaseArt.class.getSimpleName().equals(type)) {
 			mArtScore = score;
+			RecordData.artMonthAge = monthAge;
 		} else if (ActivityCaseCognitive.class.getSimpleName().equals(type)) {
 			mCognitiveScore = score;
+			RecordData.cognitiveMonthAge = monthAge;
 		} else if (ActivityCaseSpeak.class.getSimpleName().equals(type)) {
 			mSpeakScore = score;
+			RecordData.speakMonthAge = monthAge;
 		} else if (ActivityCaseEQ.class.getSimpleName().equals(type)) {
 			mEQScore = score;
+			RecordData.EQMonthAge = monthAge;
 		} 
 	}
 	
-	private int getStartMonthAge(int currentMonthAge) {
+	public static int getStartMonthAge(int currentMonthAge) {
 		if (currentMonthAge <= 1) {
 			return 1;
 		}

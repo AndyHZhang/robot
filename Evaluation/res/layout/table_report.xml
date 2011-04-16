@@ -31,7 +31,7 @@
       android:typeface="sans"
       android:textColor="#006838"
       android:text="测评编号：" />
-    <TextView android:id="@+id/evalulation_no"
+    <TextView android:id="@+id/evaluation_no"
       android:layout_width="0px"
       android:layout_height="wrap_content"
       android:layout_weight="1"
