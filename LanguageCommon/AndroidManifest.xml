@@ -7,7 +7,7 @@
 
     <application android:icon="@drawable/icon" android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name=".DashBoard"
+        <activity android:name=".Welcome"
                   android:label="@string/app_name"
                   android:screenOrientation="landscape">
             <intent-filter>
@@ -16,6 +16,9 @@
             </intent-filter>
         </activity>
         
+        <activity android:name=".SelectLanguage" android:screenOrientation="landscape" />
+        <activity android:name=".SelectContent" android:screenOrientation="landscape" />
+        <activity android:name=".DashBoard" android:screenOrientation="landscape" />
         <activity android:name=".Selector" android:screenOrientation="landscape" />
         <activity android:name=".Player" android:screenOrientation="landscape" />
 

@@ -10,4 +10,5 @@ public class UActionCode {
 	public static final int WU_SHU = 0x0062;
 	
 	public static final int LOOK_UP = 0x000A;
+	public static final int LOOK_DOWN = 0x0025;
 }

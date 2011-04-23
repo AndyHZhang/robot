@@ -27,6 +27,8 @@ public abstract class CoursePlayerActivity extends Activity {
 	static {
 		System.loadLibrary("i2c");
 	}
+	
+	private static final int[] mRandomAction = { UActionCode.LOOK_UP, UActionCode.LOOK_DOWN };
 
 	private static final int[] mRandomSound = { R.raw.random_01,
 			R.raw.random_02, R.raw.random_03, R.raw.random_04, R.raw.random_05,
@@ -69,7 +71,7 @@ public abstract class CoursePlayerActivity extends Activity {
 		}
 	};
 
-	Runnable mRandomAction = new Runnable() {
+	Runnable mPlayRandomAction = new Runnable() {
 		public void run() {
 			int soundId = mRandomSound[mRandom.nextInt(mRandomSound.length)];
 
@@ -85,7 +87,8 @@ public abstract class CoursePlayerActivity extends Activity {
 				}
 			});
 			
-			I2C.sendCommand(UActionCode.LOOK_UP);
+			int actionId = mRandomAction[mRandom.nextInt(mRandomAction.length)];
+			I2C.sendCommand(actionId);
 		}
 	};
 
@@ -163,7 +166,7 @@ public abstract class CoursePlayerActivity extends Activity {
 		super.onPause();
 
 		mHandler.removeCallbacks(mChangeSlide);
-		mHandler.removeCallbacks(mRandomAction);
+		mHandler.removeCallbacks(mPlayRandomAction);
 		mHandler.removeCallbacks(mFinish);
 		mMediaPlayer.release();
 	}
@@ -207,7 +210,7 @@ public abstract class CoursePlayerActivity extends Activity {
 	private void nextSlide(int interval) {
 
 		if (needPlayRandomAction()) {
-			mHandler.postDelayed(mRandomAction, interval);
+			mHandler.postDelayed(mPlayRandomAction, interval);
 		} else {
 			mIndex++;
 			if (mIndex == mString.length) {
