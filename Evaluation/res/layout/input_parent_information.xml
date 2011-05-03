@@ -27,7 +27,7 @@
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="80px"
+    android:layout_marginTop="60px"
     android:layout_marginLeft="80px">
     <TextView 
       android:layout_width="wrap_content"
@@ -41,7 +41,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="妈妈姓名" />
     <TextView 
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -55,7 +56,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="职业" />
   </LinearLayout>
   <LinearLayout android:id="@+id/second_line"
     android:orientation="horizontal"
@@ -75,7 +77,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="文化程度" />
     <TextView 
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -89,7 +92,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="工作单位" />
   </LinearLayout>
   <LinearLayout android:id="@+id/third_line"
     android:orientation="horizontal"
@@ -110,7 +114,8 @@
       android:textSize="25px"
       android:typeface="sans"
       android:textColor="#006838"
-      android:inputType="none" />
+      android:inputType="none"
+      android:hint="爸爸姓名" />
     <TextView 
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -124,7 +129,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="职业" />
   </LinearLayout>
   <LinearLayout android:id="@+id/forth_line"
     android:orientation="horizontal"
@@ -144,7 +150,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="文化程度" />
     <TextView 
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -158,7 +165,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="工作单位" />
   </LinearLayout>
   <LinearLayout android:id="@+id/fifth_line"
     android:orientation="horizontal"
@@ -178,7 +186,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="联系电话" />
     <TextView 
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -192,7 +201,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="手机" />
   </LinearLayout>
   <LinearLayout android:id="@+id/sixth_line"
     android:orientation="horizontal"
@@ -212,7 +222,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="家庭住址" />
   </LinearLayout>
   <LinearLayout android:id="@+id/seventh_line"
     android:orientation="horizontal"
@@ -232,7 +243,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="邮政编码" />
     <TextView 
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -246,7 +258,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="电子信箱" />
   </LinearLayout>
   <Button android:id="@+id/enter_or_exit"
     android:textSize="20px"

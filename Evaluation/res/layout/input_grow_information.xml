@@ -41,7 +41,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="体重" />
   </LinearLayout>
   <LinearLayout android:id="@+id/second_line"
     android:orientation="horizontal"
@@ -61,7 +62,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="身长" />
   </LinearLayout>
   <LinearLayout android:id="@+id/third_line"
     android:orientation="horizontal"
@@ -81,7 +83,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="头围" />
   </LinearLayout>
   <LinearLayout android:id="@+id/forth_line"
     android:orientation="horizontal"
@@ -101,7 +104,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="胸围" />
   </LinearLayout>
   <LinearLayout android:id="@+id/fifth_line"
     android:orientation="horizontal"
@@ -121,7 +125,8 @@
       android:layout_height="wrap_content"
       android:textSize="25px"
       android:typeface="sans"
-      android:textColor="#006838" />
+      android:textColor="#006838"
+      android:hint="牙数" />
   </LinearLayout>
   <Button android:id="@+id/enter_or_exit"
     android:textSize="20px"

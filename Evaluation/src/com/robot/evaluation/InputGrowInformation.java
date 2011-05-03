@@ -55,18 +55,33 @@ public class InputGrowInformation extends Activity {
 	}
 
 	private void readRecordData() {
-		mWeight.setText(Float.toString(RecordData.weight));
-		mHeight.setText(Float.toString(RecordData.height));
-		mHead.setText(Float.toString(RecordData.head));
-		mBust.setText(Float.toString(RecordData.bust));
-		mTeeth.setText(Float.toString(RecordData.teeth));
+		if (RecordData.weight != 0)
+			mWeight.setText(Float.toString(RecordData.weight));
+		if (RecordData.height != 0)
+			mHeight.setText(Float.toString(RecordData.height));
+		if (RecordData.head != 0)
+			mHead.setText(Float.toString(RecordData.head));
+		if (RecordData.bust != 0)
+			mBust.setText(Float.toString(RecordData.bust));
+		if (RecordData.teeth != 0)
+			mTeeth.setText(Float.toString(RecordData.teeth));
 	}
 
 	private void saveUserInput() {
-		RecordData.weight = Float.parseFloat(mWeight.getEditableText().toString());
-		RecordData.height = Float.parseFloat(mHeight.getEditableText().toString());
-		RecordData.head = Float.parseFloat(mHead.getEditableText().toString());
-		RecordData.bust = Float.parseFloat(mBust.getEditableText().toString());
-		RecordData.teeth = Float.parseFloat(mTeeth.getEditableText().toString());
+		try {
+			RecordData.weight = Float.parseFloat(mWeight.getEditableText().toString());
+		} catch (NumberFormatException e){}
+		try {
+			RecordData.height = Float.parseFloat(mHeight.getEditableText().toString());
+		} catch (NumberFormatException e){}
+		try {
+			RecordData.head = Float.parseFloat(mHead.getEditableText().toString());
+		} catch (NumberFormatException e){}
+		try {
+			RecordData.bust = Float.parseFloat(mBust.getEditableText().toString());
+		} catch (NumberFormatException e){}
+		try {
+			RecordData.teeth = Float.parseFloat(mTeeth.getEditableText().toString());
+		} catch (NumberFormatException e){}
 	}
 }
