@@ -199,6 +199,8 @@ public class Evaluation extends TabActivity {
 		
 		Log.d(TAG, "Evaluation onResume");
 		registerReceiver(mReceiver, mFilter);
+		
+		RandomAction.start(this);
 	}
 	
 	@Override
@@ -207,5 +209,7 @@ public class Evaluation extends TabActivity {
 		
 		Log.d(TAG, "Evaluation onPause");
 		this.unregisterReceiver(mReceiver);
+		
+		RandomAction.stop();
 	}
 }

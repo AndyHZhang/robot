@@ -43,5 +43,19 @@ public class InputEvaulationNumber extends Activity {
 			});
 		}
 	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		
+		RandomAction.start(this);
+	}
+	
+	@Override
+	public void onPause() {
+		super.onPause();
+		
+		RandomAction.stop();
+	}
 
 }

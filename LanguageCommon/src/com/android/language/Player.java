@@ -16,10 +16,9 @@ public class Player extends Activity {
 
 	private static final int SND_INVALID = 0;
 	
-	/*
 	static {
 		System.loadLibrary("i2c");
-	}*/
+	}
 
 	private static final int[] mRandomSound = { R.raw.random_01,
 			R.raw.random_02, R.raw.random_03, R.raw.random_04, R.raw.random_05,

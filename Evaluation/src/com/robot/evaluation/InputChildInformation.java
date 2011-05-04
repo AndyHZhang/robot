@@ -76,6 +76,20 @@ public class InputChildInformation extends Activity implements OnClickListener {
 
 		readRecordData();
 	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		
+		RandomAction.start(this);
+	}
+	
+	@Override
+	public void onPause() {
+		super.onPause();
+		
+		RandomAction.stop();
+	}
 
 	public void onClick(View v) {
 		showDialog(DATE_DIALOG_ID);
@@ -150,7 +164,9 @@ public class InputChildInformation extends Activity implements OnClickListener {
 		RecordData.birth_month = mBirthMonth.getEditableText().toString();
 		RecordData.birth_day = mBirthDay.getEditableText().toString();
 	    
-		RecordData.age_in_days = Integer.parseInt(mAgeInDays.getEditableText().toString());
+		try {
+			RecordData.age_in_days = Integer.parseInt(mAgeInDays.getEditableText().toString());
+		} catch (NumberFormatException e) {}
 	}
 
 }
