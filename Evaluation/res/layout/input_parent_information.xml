@@ -261,6 +261,16 @@
       android:textColor="#006838"
       android:hint="电子信箱" />
   </LinearLayout>
+  <Button android:id="@+id/back"
+    android:textSize="20px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:layout_marginTop="420px"
+    android:layout_marginLeft="20px"
+    android:text="请按此返回上一步" />
   <Button android:id="@+id/enter_or_exit"
     android:textSize="20px"
     android:layout_width="wrap_content"

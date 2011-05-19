@@ -17,6 +17,7 @@ public class InputGrowInformation extends Activity {
 	private EditText mTeeth;
 
 	private Button mEnter;
+	private Button mBack;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,20 @@ public class InputGrowInformation extends Activity {
 		mHead = (EditText) findViewById(R.id.head);
 		mBust = (EditText) findViewById(R.id.bust);
 		mTeeth = (EditText) findViewById(R.id.teeth);
+		
+		mBack = (Button) findViewById(R.id.back);
+		if (mBack != null) {
+			mBack.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					saveUserInput();
+					
+					finish();
+					
+					startActivity(new Intent(InputGrowInformation.this,
+							InputParentInformation.class));
+				}
+			});
+		}
 
 		mEnter = (Button) findViewById(R.id.enter_or_exit);
 		if (mEnter != null) {

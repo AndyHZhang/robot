@@ -25,6 +25,7 @@ public class InputParentInformation extends Activity {
 	private EditText mEmailAddress;
 	
 	private Button mEnter;
+	private Button mBack;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,20 @@ public class InputParentInformation extends Activity {
 		mHomeAddress = (EditText) findViewById(R.id.home_address);
 		mZipCode = (EditText) findViewById(R.id.zip_code);
 		mEmailAddress = (EditText) findViewById(R.id.email_address);
+		
+		mBack = (Button) findViewById(R.id.back);
+		if (mBack != null) {
+			mBack.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					saveUserInput();
+					
+					finish();
+					
+					startActivity(new Intent(InputParentInformation.this,
+							InputChildInformation.class));
+				}
+			});
+		}
 		
 		mEnter = (Button) findViewById(R.id.enter_or_exit);
 		if (mEnter != null) {
