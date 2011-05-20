@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/unit_bg">
+  <CheckBox android:id="@+id/unit01"
+    android:layout_width="157px"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="65px"
+    android:layout_marginTop="83px"
+    android:button="@drawable/unit01"/>
+  <CheckBox android:id="@+id/unit02"
+    android:layout_width="157px"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12px"
+    android:layout_alignTop="@id/unit01"
+    android:layout_toRightOf="@id/unit01"
+    android:button="@drawable/unit02"
+    />
+  
+  <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10px"
+    android:src="@drawable/unit_setting"
+    />
+  <ImageView android:id="@+id/close"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="190px"
+    android:layout_marginTop="10px"
+    android:src="@drawable/close"
+    />
+  <ImageView android:id="@+id/next"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="730px"
+    android:layout_marginTop="10px"
+    android:src="@drawable/next"
+    />
+</RelativeLayout>
