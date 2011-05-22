@@ -18,10 +18,7 @@ public class Welcome extends Activity {
 		v.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				finish();
-				//startActivity(new Intent(Welcome.this, LanguageSelector.class));
-				Intent i = new Intent();
-				i.setClassName("com.robot.language.unit0201", "com.robot.language.unit0201.Test");
-				startActivity(i);
+				startActivity(new Intent(Welcome.this, UnitSelector.class));
 			}
 		});
 	}

@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.robot.language.unit02.LanguageSelector" android:screenOrientation="landscape" />
+        <activity android:name=".UnitSelector" android:screenOrientation="landscape" />
+        <activity android:name=".LanguageSelector" android:screenOrientation="landscape" />
 
     </application>
 </manifest>

@@ -6,7 +6,5 @@
   <ImageView android:id="@+id/show_image"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="142px"
-    android:layout_marginTop="28px"
     />
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.ImageView;
 
 public abstract class PlayerBaseActivity extends Activity {
@@ -15,8 +16,8 @@ public abstract class PlayerBaseActivity extends Activity {
 	
 	abstract public void createArrayList(ArrayList<Integer> i, ArrayList<Integer> s);
 
-	private static ArrayList<Integer> mImageArray = new ArrayList<Integer>();
-	private static ArrayList<Integer> mSoundArray = new ArrayList<Integer>();
+	private static ArrayList<Integer> mImageArray;
+	private static ArrayList<Integer> mSoundArray;
 	
 	public boolean bCNSelected;
 	public boolean bENSelected;
@@ -34,6 +35,7 @@ public abstract class PlayerBaseActivity extends Activity {
 
 	Runnable mFinish = new Runnable() {
 		public void run() {
+			setResult(1);
 			finish();
 		}
 	};
@@ -51,7 +53,7 @@ public abstract class PlayerBaseActivity extends Activity {
 				mMediaPlayer.start();
 			}
 
-			nextSlide(3000);
+			nextSlide(1500);
 		}
 	};
 
@@ -70,6 +72,8 @@ public abstract class PlayerBaseActivity extends Activity {
 		bJPSelected = i.getBooleanExtra("JP Selected", false);
 		bTextSelected = i.getBooleanExtra("Text Selected", true);
 		bImageSelected = i.getBooleanExtra("Image Selected", true);
+		
+		Log.d("Andy", "player activity read J is " + bJPSelected);
 
 		setContentView(R.layout.player);
 
@@ -77,6 +81,8 @@ public abstract class PlayerBaseActivity extends Activity {
 
 		mMediaPlayer = new MediaPlayer();
 		
+		mImageArray = new ArrayList<Integer>();
+		mSoundArray = new ArrayList<Integer>();
 		createArrayList(mImageArray, mSoundArray);
 	}
 
@@ -84,7 +90,7 @@ public abstract class PlayerBaseActivity extends Activity {
 	public void onResume() {
 		super.onResume();
 
-		nextSlide(0);
+		mHandler.postDelayed(mShowNextImage, 0);
 	}
 
 	@Override

@@ -56,45 +56,119 @@ public class Player extends PlayerBaseActivity {
 	public static final int[] TEXT_SOUND_JP = { R.raw.jp00, R.raw.jp01,
 			R.raw.jp02, R.raw.jp03, R.raw.jp04, R.raw.jp05, R.raw.jp06,
 			R.raw.jp07, R.raw.jp08, R.raw.jp09, R.raw.jp10 };
+	
+	private void fillTitle(ArrayList<Integer> imgArray,
+			ArrayList<Integer> sndArray) {
+		if (bCNSelected) {
+			imgArray.add(TEXT_CN[0]);
+			sndArray.add(TEXT_SOUND_CN[0]);
+			return;
+		}
+
+		if (bENSelected) {
+			imgArray.add(TEXT_EN[0]);
+			sndArray.add(TEXT_SOUND_EN[0]);
+			return;
+		}
+		
+		if (bJPSelected) {
+			imgArray.add(TEXT_JP[0]);
+			sndArray.add(TEXT_SOUND_JP[0]);
+			return;
+		}
+
+		if (bFRSelected) {
+			imgArray.add(TEXT_FR[0]);
+			sndArray.add(TEXT_SOUND_FR[0]);
+			return;
+		}
+
+		if (bITSelected) {
+			imgArray.add(TEXT_IT[0]);
+			sndArray.add(TEXT_SOUND_IT[0]);
+			return;
+		}
+
+		if (bESSelected) {
+			imgArray.add(TEXT_ES[0]);
+			sndArray.add(TEXT_SOUND_ES[0]);
+			return;
+		}
+	}
 
 	public void createArrayList(ArrayList<Integer> imgArray,
 			ArrayList<Integer> sndArray) {
+		
+		fillTitle(imgArray, sndArray);
+		
 		for (int i = 0; i < TOTAL_NUMBER; i++) {
 			if (bTextSelected) {
 				if (bCNSelected) {
 					imgArray.add(TEXT_CN[i+1]);
-					sndArray.add(TEXT_SOUND_CN[i]);
+					sndArray.add(TEXT_SOUND_CN[i+1]);
 				}
 
 				if (bENSelected) {
 					imgArray.add(TEXT_EN[i+1]);
-					sndArray.add(TEXT_SOUND_EN[i]);
+					sndArray.add(TEXT_SOUND_EN[i+1]);
 				}
 
 				if (bESSelected) {
 					imgArray.add(TEXT_ES[i+1]);
-					sndArray.add(TEXT_SOUND_ES[i]);
+					sndArray.add(TEXT_SOUND_ES[i+1]);
 				}
 
 				if (bFRSelected) {
 					imgArray.add(TEXT_FR[i+1]);
-					sndArray.add(TEXT_SOUND_FR[i]);
+					sndArray.add(TEXT_SOUND_FR[i+1]);
 				}
 
 				if (bITSelected) {
 					imgArray.add(TEXT_IT[i+1]);
-					sndArray.add(TEXT_SOUND_IT[i]);
+					sndArray.add(TEXT_SOUND_IT[i+1]);
 				}
 
 				if (bJPSelected) {
 					imgArray.add(TEXT_JP[i+1]);
-					sndArray.add(TEXT_SOUND_JP[i]);
+					sndArray.add(TEXT_SOUND_JP[i+1]);
 				}
 			}
 
 			if (bImageSelected) {
-				imgArray.add(PIC[i]);
-				sndArray.add(PlayerBaseActivity.SND_INVALID);
+				if (bTextSelected) {
+					imgArray.add(PIC[i]);
+					sndArray.add(PlayerBaseActivity.SND_INVALID);
+				} else {
+					if (bCNSelected) {
+						imgArray.add(PIC[i]);
+						sndArray.add(TEXT_SOUND_CN[i+1]);
+					}
+
+					if (bENSelected) {
+						imgArray.add(PIC[i]);
+						sndArray.add(TEXT_SOUND_EN[i+1]);
+					}
+
+					if (bESSelected) {
+						imgArray.add(PIC[i]);
+						sndArray.add(TEXT_SOUND_ES[i+1]);
+					}
+
+					if (bFRSelected) {
+						imgArray.add(PIC[i]);
+						sndArray.add(TEXT_SOUND_FR[i+1]);
+					}
+
+					if (bITSelected) {
+						imgArray.add(PIC[i]);
+						sndArray.add(TEXT_SOUND_IT[i+1]);
+					}
+
+					if (bJPSelected) {
+						imgArray.add(PIC[i]);
+						sndArray.add(TEXT_SOUND_JP[i+1]);
+					}
+				}
 			}
 		}
 	}
