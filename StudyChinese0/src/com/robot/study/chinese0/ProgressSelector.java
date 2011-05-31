@@ -54,4 +54,8 @@ public class ProgressSelector extends ProgressSelectorActivity {
 
 		setAdapter(new ProgressAdapter());
 	}
+	
+	int getSoundId() {
+		return R.raw.snd_2;
+	}
 }

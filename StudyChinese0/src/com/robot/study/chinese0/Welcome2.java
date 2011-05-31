@@ -3,15 +3,14 @@ package com.robot.study.chinese0;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.robot.study.WelcomeActivity;
+import com.robot.study.WelcomeActivity2;
 
-public class Welcome extends WelcomeActivity {
-
+public class Welcome2 extends WelcomeActivity2 {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setWelcomeImage(R.drawable.welcome);
+		setWelcomeImage(R.drawable.welcome_2);
 
 		setOnNextActivityListener(new OnNextActivityListener() {
 			public void onNextActivity() {
@@ -23,9 +22,5 @@ public class Welcome extends WelcomeActivity {
 				finish();
 			}
 		});
-	}
-	
-	public int getWelcomeSound() {
-		return R.raw.snd_1;
 	}
 }

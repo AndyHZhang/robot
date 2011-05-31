@@ -261,8 +261,8 @@ public class Config {
 		put("60", Const.SOUND_INVALID);
 		put("62", Const.SOUND_INVALID);
 		
-		put("-", Const.SOUND_INVALID);
-		put("=", Const.SOUND_INVALID);
+		put("-", R.raw.sub);
+		put("=", R.raw.equal);
 		}
 	};
 	

@@ -27,4 +27,8 @@ public class CoursePlayer extends CoursePlayerActivity {
 	public int getImage(String s) {
 		return Config.mImageMap.get(s);
 	}
+	
+	public int getSoundId() {
+		return R.raw.snd_3;
+	}
 }

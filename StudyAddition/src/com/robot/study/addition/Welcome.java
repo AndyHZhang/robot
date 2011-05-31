@@ -24,4 +24,8 @@ public class Welcome extends WelcomeActivity {
 			}
 		});
 	}
+	
+	public int getWelcomeSound() {
+		return R.raw.snd_1;
+	}
 }

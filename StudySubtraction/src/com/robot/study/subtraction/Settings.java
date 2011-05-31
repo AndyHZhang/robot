@@ -1,17 +1,16 @@
-package com.robot.study.chinese0;
+package com.robot.study.subtraction;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.robot.study.WelcomeActivity;
+import com.robot.study.SettingsActivity;
 
-public class Welcome extends WelcomeActivity {
-
+public class Settings extends SettingsActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setWelcomeImage(R.drawable.welcome);
+		setBackgroundImage(R.drawable.settings_bg);
 
 		setOnNextActivityListener(new OnNextActivityListener() {
 			public void onNextActivity() {
@@ -23,9 +22,5 @@ public class Welcome extends WelcomeActivity {
 				finish();
 			}
 		});
-	}
-	
-	public int getWelcomeSound() {
-		return R.raw.snd_1;
 	}
 }

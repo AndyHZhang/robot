@@ -1,8 +1,10 @@
 package com.robot.study;
 
 import android.app.Activity;
-import android.os.Handler;
-import android.view.View.OnTouchListener;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
 public class WelcomeActivity extends Activity {
@@ -10,12 +12,14 @@ public class WelcomeActivity extends Activity {
 	// private static final String TAG = "Welcome";
 
 	private static final int LOADING_TIME = 3 * 1000;
+	
+	private MediaPlayer mPlayer;
 
 	private boolean gotWelcomeImage = false;
 	public void setWelcomeImage(int res) {
 		setContentView(R.layout.welcome);
 
-		LinearLayout main = (LinearLayout) findViewById(R.id.welcome);
+		View main = findViewById(R.id.welcome);
 		if (main != null) {
 			main.setBackgroundResource(res);
 		}
@@ -33,16 +37,6 @@ public class WelcomeActivity extends Activity {
 		mOnNextActivityListener = listener;
 	}
 
-	Handler mHandler = new Handler();
-
-	Runnable mLoadMainActivity = new Runnable() {
-		public void run() {
-			if (mOnNextActivityListener != null) {
-				mOnNextActivityListener.onNextActivity();
-			}
-		}
-	};
-
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -52,13 +46,30 @@ public class WelcomeActivity extends Activity {
 					"setWelcomeImage() should be called in onCreate");
 		}
 
-		mHandler.postDelayed(mLoadMainActivity, LOADING_TIME);
+		mPlayer = MediaPlayer.create(this, getWelcomeSound());
+		mPlayer.start();
+		
+		findViewById(R.id.welcome).setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				if (mOnNextActivityListener != null) {
+					mOnNextActivityListener.onNextActivity();
+				}
+			}
+		});
+	}
+	
+	protected int getWelcomeSound() {
+		return 0;
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-
-		mHandler.removeCallbacks(mLoadMainActivity);
+		
+		if (mPlayer != null) {
+			mPlayer.stop();
+			mPlayer.release();
+			mPlayer = null;
+		}
 	}
 }

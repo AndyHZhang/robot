@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  android:id="@+id/settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/settings">
+  <View
+    android:layout_marginLeft="220px"
+    android:layout_marginTop="170px"
+    android:layout_width="361px"
+    android:layout_height="136px"
+    android:background="@drawable/seekbar_bg"
+    />
+  <View 
+    android:layout_marginLeft="336px"
+    android:layout_marginTop="234px"
+    android:layout_width="192px"
+    android:layout_height="11px"
+    android:background="@drawable/seekbar_bar"
+    />
+  <View android:id="@+id/btn_exit"
+    android:layout_marginLeft="547px"
+    android:layout_marginTop="177px"
+    android:layout_width="21px"
+    android:layout_height="18px"
+    android:background="@drawable/close"
+    />
+  <!--  -->
+  <SeekBar android:id="@+id/seek"
+     android:layout_marginLeft="336px"
+     android:layout_marginTop="234px"
+     android:layout_width="192px"
+     android:layout_height="wrap_content"
+      android:progressDrawable="@drawable/px1"
+      android:thumb="@drawable/seekbar_slider"
+      android:max="10"
+      android:progress="5" />
+</RelativeLayout>

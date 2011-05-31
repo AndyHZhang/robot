@@ -28,4 +28,8 @@ public class CoursePlayer extends CoursePlayerActivity {
 	public int getImage(String s) {
 		return Const.IMAGE_INVALID;
 	}
+	
+	public int getSoundId() {
+		return R.raw.snd_3;
+	}
 }
