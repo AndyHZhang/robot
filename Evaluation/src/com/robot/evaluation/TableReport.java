@@ -119,20 +119,6 @@ public class TableReport extends Activity {
 		mSpeakResult.setText(getSpeakResult());
 	}
 	
-	@Override
-	public void onResume() {
-		super.onResume();
-		
-		RandomAction.start(this);
-	}
-	
-	@Override
-	public void onPause() {
-		super.onPause();
-		
-		RandomAction.stop();
-	}
-	
 	private String getBodyResult() {
 		double standardWeight = 0;
 		double standardHeight = 0;

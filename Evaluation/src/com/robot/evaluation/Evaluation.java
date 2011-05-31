@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,6 +25,8 @@ public class Evaluation extends TabActivity {
 	
 	private int mStartMonthAge;
 	public static int sCurrentMonthAge;
+	
+	private MediaPlayer mPlayer;
 	
 	private static final String TAG = "Evaluation";
 	
@@ -56,6 +59,9 @@ public class Evaluation extends TabActivity {
 			//mImage.setImageResource(R.drawable.star_big_on);
 			
 			if (isAllDataReady()) {
+				mPlayer = MediaPlayer.create(Evaluation.this, R.raw.snd_05);
+				mPlayer.start();
+				
 				new AlertDialog.Builder(Evaluation.this)
 				.setTitle("已完成评测")
 				.setMessage("产生教育方案？")
@@ -199,8 +205,6 @@ public class Evaluation extends TabActivity {
 		
 		Log.d(TAG, "Evaluation onResume");
 		registerReceiver(mReceiver, mFilter);
-		
-		RandomAction.start(this);
 	}
 	
 	@Override
@@ -210,6 +214,10 @@ public class Evaluation extends TabActivity {
 		Log.d(TAG, "Evaluation onPause");
 		this.unregisterReceiver(mReceiver);
 		
-		RandomAction.stop();
+		if (mPlayer != null) {
+			mPlayer.stop();
+			mPlayer.release();
+			mPlayer = null;
+		}
 	}
 }

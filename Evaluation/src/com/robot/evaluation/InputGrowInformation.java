@@ -68,20 +68,6 @@ public class InputGrowInformation extends Activity {
 
 		readRecordData();
 	}
-	
-	@Override
-	public void onResume() {
-		super.onResume();
-		
-		RandomAction.start(this);
-	}
-	
-	@Override
-	public void onPause() {
-		super.onPause();
-		
-		RandomAction.stop();
-	}
 
 	private void readRecordData() {
 		if (RecordData.weight != 0)

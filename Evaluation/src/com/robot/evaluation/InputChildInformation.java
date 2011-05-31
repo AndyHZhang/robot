@@ -76,20 +76,6 @@ public class InputChildInformation extends Activity implements OnClickListener {
 
 		readRecordData();
 	}
-	
-	@Override
-	public void onResume() {
-		super.onResume();
-		
-		RandomAction.start(this);
-	}
-	
-	@Override
-	public void onPause() {
-		super.onPause();
-		
-		RandomAction.stop();
-	}
 
 	public void onClick(View v) {
 		showDialog(DATE_DIALOG_ID);

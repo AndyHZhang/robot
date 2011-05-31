@@ -45,6 +45,7 @@ public abstract class ActivityCaseBase extends Activity {
 		mYesBtn.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				mActualMonthAge = mMonthAge;
+				cleanMusic();
 				nextCase();
 			}
 		});
@@ -52,6 +53,7 @@ public abstract class ActivityCaseBase extends Activity {
 		mNoBtn = (Button) findViewById(R.id.no_btn);
 		mNoBtn.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+				cleanMusic();
 				nextEvaluation();
 			}
 		});
@@ -59,6 +61,10 @@ public abstract class ActivityCaseBase extends Activity {
 		mMonthAge = getIntent().getIntExtra(CATEGORY_START_MONTH_AGE, 1);
 		mCurrentMonthAge = Evaluation.sCurrentMonthAge;
 		refreshQuestion(mMonthAge);
+	}
+	
+	void cleanMusic() {
+		
 	}
 	
 	private void nextCase() {
