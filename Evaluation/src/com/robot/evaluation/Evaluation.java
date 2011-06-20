@@ -64,7 +64,7 @@ public class Evaluation extends TabActivity {
 				
 				new AlertDialog.Builder(Evaluation.this)
 				.setTitle("已完成评测")
-				.setMessage("产生教育方案？")
+				.setMessage("产生测评报告单？")
 				.setPositiveButton("生成",new OnClickListener() {
 					public void onClick(DialogInterface dialog, int whichButton) {
 						finish();

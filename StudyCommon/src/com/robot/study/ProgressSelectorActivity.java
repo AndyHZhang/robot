@@ -89,7 +89,8 @@ public abstract class ProgressSelectorActivity extends Activity {
 						int position, long id) {
 					mPosition = position;
 					
-					mPlayer.release();
+					if (mPlayer != null) mPlayer.release();
+					
 					mPlayer = MediaPlayer.create(ProgressSelectorActivity.this,
 							getRandomSound());
 					mPlayer.start();

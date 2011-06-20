@@ -2,11 +2,15 @@ package com.robot.evaluation;
 
 import java.util.Calendar;
 
-import com.robot.evaluation.Const.Cases;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
+
+import com.robot.evaluation.Const.Cases;
 
 public class TableReport extends Activity {
 
@@ -40,10 +44,34 @@ public class TableReport extends Activity {
 	private TextView mMotionResult;
 	private TextView mSpeakTest;
 	private TextView mSpeakResult;
+	
+	private Button mTrainingPlan;
+	
+	private int mMotionScore;
+	private int mArtScore;
+	private int mCognitiveScore;
+	private int mSpeakScore;
+	private int mEQScore;
+	private int mScore;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Intent i = getIntent();
+		if (i != null) {
+			mMotionScore = i.getIntExtra(Score.SCORE_MOTION, 0);
+			
+			mArtScore = i.getIntExtra(Score.SCORE_ART, 0);
+			
+			mCognitiveScore = i.getIntExtra(Score.SCORE_COGNITIVE, 0);
+			
+			mSpeakScore = i.getIntExtra(Score.SCORE_SPEAK, 0);
+			
+			mEQScore = i.getIntExtra(Score.SCORE_EQ, 0);
+			
+			mScore = (mMotionScore + mArtScore + mCognitiveScore + mSpeakScore + mEQScore) / 5;
+		}
 
 		setContentView(R.layout.table_report);
 
@@ -117,6 +145,21 @@ public class TableReport extends Activity {
 		
 		mSpeakResult = (TextView) findViewById(R.id.speak_result);
 		mSpeakResult.setText(getSpeakResult());
+		
+		mTrainingPlan = (Button) findViewById(R.id.training_plan);
+		mTrainingPlan.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				finish();
+				
+				Intent startIntent = new Intent(TableReport.this, Score.class);
+				startIntent.putExtra(Score.SCORE_MOTION, mMotionScore);
+				startIntent.putExtra(Score.SCORE_ART, mArtScore);
+				startIntent.putExtra(Score.SCORE_COGNITIVE, mCognitiveScore);
+				startIntent.putExtra(Score.SCORE_SPEAK, mSpeakScore);
+				startIntent.putExtra(Score.SCORE_EQ, mEQScore);
+				startActivity(startIntent);
+			}
+		});
 	}
 	
 	private String getBodyResult() {

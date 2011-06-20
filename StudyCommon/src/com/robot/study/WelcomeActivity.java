@@ -47,7 +47,7 @@ public class WelcomeActivity extends Activity {
 		}
 
 		mPlayer = MediaPlayer.create(this, getWelcomeSound());
-		mPlayer.start();
+		//mPlayer.start();
 		
 		findViewById(R.id.welcome).setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {

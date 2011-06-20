@@ -19,7 +19,7 @@
     android:typeface="sans"
     android:textColor="#006838"
     android:textStyle="bold"
-    android:text="华夏英杰0~6岁婴幼儿身心发展测评报告单" />
+    android:text="0~6岁婴幼儿身心发展测评报告单" />
     
   <LinearLayout android:layout_width="780px" android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal" >
@@ -302,6 +302,16 @@
     <View android:layout_height="30px" />
     
   </TableLayout>
+  
+  <Button android:id="@+id/training_plan"
+    android:textSize="20px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:typeface="sans"
+    android:textStyle="bold"
+    android:textColor="#006838"
+    android:layout_marginLeft="600px"
+    android:text="生成教育方案" />
   
   </LinearLayout>
 		

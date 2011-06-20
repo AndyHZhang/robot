@@ -7,15 +7,6 @@
   <TextView 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:textSize="20px"
-    android:layout_marginTop="30px"
-    android:gravity="center_horizontal"
-    android:typeface="sans"
-    android:textColor="#006838"
-    android:text="中国●北京 华夏英杰教育科学研究院儿童早期教育研究所" />
-  <TextView 
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
     android:textSize="50px"
     android:layout_marginTop="80px"
     android:gravity="center_horizontal"

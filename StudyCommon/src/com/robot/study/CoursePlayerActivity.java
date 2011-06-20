@@ -116,7 +116,7 @@ public abstract class CoursePlayerActivity extends Activity {
 
 		mImage = (ImageView) findViewById(getImageId());
 
-		mSlideSpeed = getSharedPreferences("settings", 0).getInt("speed", 3) * 1000;
+		mSlideSpeed = 10000 / getSharedPreferences("settings", 0).getInt("speed", 3);
 	}
 
 	@Override

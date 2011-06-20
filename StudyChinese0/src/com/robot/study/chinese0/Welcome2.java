@@ -15,7 +15,7 @@ public class Welcome2 extends WelcomeActivity2 {
 		setOnNextActivityListener(new OnNextActivityListener() {
 			public void onNextActivity() {
 				String packageName = getPackageName();
-				String activityName = ProgressSelector.class.getName();
+				String activityName = Welcome2.class.getName();
 				startActivity(new Intent().setClassName(packageName,
 						activityName));
 

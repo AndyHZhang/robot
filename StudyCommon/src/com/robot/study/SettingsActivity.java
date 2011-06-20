@@ -43,7 +43,7 @@ public class SettingsActivity extends Activity {
 		findViewById(R.id.btn_exit).setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				if (mOnNextActivityListener != null) {
-					int speed = mSeekBar.getProgress() + 1;
+					int speed = mSeekBar.getProgress();
 
 					getSharedPreferences("settings", 0).edit()
 							.putInt("speed", speed).commit();
