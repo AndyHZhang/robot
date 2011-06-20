@@ -203,29 +203,52 @@ public class Main extends Activity {
     }
     
     private void initEngine() {
-    	mVREngine = new JNI();
-        
-    	mVREngine.msrInitWithPenalty(0);
-		mVREngine.msrSetLogLevel(0);
-		mVocHandle = mVREngine.msrCreateVocabulary(100);
-        mVREngine.msrOpen();
-        
-		for (String s : mCommonSpeakData) {
-			mVREngine.msrAddActiveWord(mVocHandle, s);
-		}
+		mVREngine = new JNI();
 
-		for (String s : mAppSpeakData) {
-        	mVREngine.msrAddActiveWord(mVocHandle, s);
-        }
+		mVREngine.msrSetLogLevel(7);
+		int ret = mVREngine.msrInitWithPenalty(147);
+		if (ret == 0) {
+			
+			// mVocHandle = mVREngine.msrCreateVocabulary(100);
+			mVocHandle = mVREngine.msrCreateVocabulary(3000); // update follow
+																// BeiJing's
+																// code
+			mVREngine.msrOpen();
+
+			for (String s : mCommonSpeakData) {
+				mVREngine.msrAddActiveWord(mVocHandle, s);
+			}
+
+			for (String s : mAppSpeakData) {
+				mVREngine.msrAddActiveWord(mVocHandle, s);
+			}
+		} else {
+			Toast.makeText(this, "MSR Init Error! Error code is " + ret,
+					Toast.LENGTH_SHORT).show();
+			finish();
+
+		}
     }
     
     private void closeEngine() {
     	if (mVREngine != null) {
-    		mVREngine.msrRemoveVocabularyFromDecoder(mVocHandle);
+			/*
+			mVREngine.msrRemoveVocabularyFromDecoder(mVocHandle);
 			mVREngine.msrDestroyVocabulary(mVocHandle);
 			mVREngine.msrClose();
 			mVREngine.msrExit();
-    	}
+			*/
+			int ret = 0;
+			ret = mVREngine.msrStop();
+			if (ret == 0) {
+				if (mVocHandle != 0)
+					mVREngine.msrRemoveVocabularyFromDecoder(mVocHandle);
+
+				ret = mVREngine.msrDestroyVocabulary(mVocHandle);
+			}
+			ret = mVREngine.msrClose();
+			ret = mVREngine.msrExit();
+		}
     }
     
     private void startScan() {
