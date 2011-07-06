@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<config version="1.0">
+
+    <Data>
+        <Interrupt>0X1001</Interrupt>
+        <Sound>/sdcard/qnqn/robotmanager/sound/01.mp3</Sound>
+		<Action>0X002A</Action>
+    </Data>
+    
+    <Data>
+        <Interrupt>0X1006</Interrupt>
+        <Sound>/sdcard/qnqn/robotmanager/sound/02.mp3</Sound>
+    </Data>
+
+</config>

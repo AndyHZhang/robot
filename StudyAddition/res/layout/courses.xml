@@ -10,5 +10,17 @@
     	android:layout_gravity="center"
     	android:src="@drawable/course01"
     	/>
+    
+    <TextView android:id="@+id/text"
+    	android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="200px"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:shadowColor="#FF000000"
+        android:shadowDx="0"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        />
     	
 </FrameLayout>

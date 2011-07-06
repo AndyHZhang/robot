@@ -9,7 +9,7 @@ public class CoursePlayer extends CoursePlayerActivity {
 	}
 	
 	public int getTextId() {
-		return 0;
+		return R.id.text;
 	}
 	
 	public int getImageId() {

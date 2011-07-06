@@ -1,5 +1,7 @@
 package com.robot.study;
 
+import java.util.Random;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -33,7 +35,7 @@ public abstract class CoursePlayerActivity extends Activity {
 	public abstract int getSound(String s);
 
 	public abstract int getImage(String s);
-	
+
 	public abstract int getSoundId();
 
 	private int mIndex = -1;
@@ -56,16 +58,18 @@ public abstract class CoursePlayerActivity extends Activity {
 		public void run() {
 			String s = mString[mIndex];
 			if (!Const.COURSE_BREAK.equals(s)) {
-				if (mText != null) {
-					mText.setTextSize(200);
-					mText.setText(mString[mIndex]);
-				}
-
-				if (mImage != null) {
+				if (mImage != null && mText != null) {
+					// for StudyAddition & StudySubtaction
 					int image = getImage(s);
 					if (image != Const.IMAGE_INVALID) {
 						mImage.setImageResource(image);
 					}
+
+					mText.setVisibility(View.INVISIBLE);
+				} else {
+					// for StudyChinese
+					mText.setTextSize(200);
+					mText.setText(mString[mIndex]);
 				}
 
 				int sound = getSound(s);
@@ -80,16 +84,32 @@ public abstract class CoursePlayerActivity extends Activity {
 			} else {
 				mMediaPlayer.release();
 				mMediaPlayer = MediaPlayer.create(CoursePlayerActivity.this,
-						getSoundId());
+						nextCourseSound());
 				mMediaPlayer.start();
 
-				if (mText != null) {
+				if (mImage != null && mText != null) {
+					// for StudyAddition & StudySubtaction
+					mText.setTextSize(130);
+					mText.setText(getNextCourseResId());
+
+					mImage.setImageResource(R.drawable.blank);
+					mText.setVisibility(View.VISIBLE);
+				} else {
+					// for StudyChinese
 					mText.setTextSize(130);
 					mText.setText(getNextCourseResId());
 				}
 			}
 		}
 	};
+
+	private static int NEXT_SND[] = { R.raw.next_1, R.raw.next_2, R.raw.next_3,
+			R.raw.next_4, R.raw.next_5, R.raw.next_6, R.raw.next_7 };
+	private Random mRandom = new Random(System.currentTimeMillis());
+
+	private int nextCourseSound() {
+		return NEXT_SND[mRandom.nextInt(NEXT_SND.length)];
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -116,7 +136,8 @@ public abstract class CoursePlayerActivity extends Activity {
 
 		mImage = (ImageView) findViewById(getImageId());
 
-		mSlideSpeed = 10000 / getSharedPreferences("settings", 0).getInt("speed", 3);
+		mSlideSpeed = 10000 / getSharedPreferences("settings", 0).getInt(
+				"speed", 3);
 	}
 
 	@Override
