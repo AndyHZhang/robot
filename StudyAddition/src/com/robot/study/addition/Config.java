@@ -1103,6 +1103,33 @@ public class Config {
 		
 		put("+", R.drawable.blank);
 		put("=", R.drawable.blank);
+		
+		put("1_e", R.drawable.red01);
+		put("2_e", R.drawable.red02);
+		put("3_e", R.drawable.red03);
+		put("4_e", R.drawable.red04);
+		put("5_e", R.drawable.red05);
+		put("6_e", R.drawable.red06);
+		put("7_e", R.drawable.red07);
+		put("8_e", R.drawable.red08);
+		put("9_e", R.drawable.red09);
+		put("10_e", R.drawable.red10);
+		put("11_e", R.drawable.red11);
+		put("12_e", R.drawable.red12);
+		put("13_e", R.drawable.red13);
+		put("14_e", R.drawable.red14);
+		put("15_e", R.drawable.red15);
+		put("16_e", R.drawable.red16);
+		put("17_e", R.drawable.red17);
+		put("18_e", R.drawable.red18);
+		put("19_e", R.drawable.red19);
+		put("20_e", R.drawable.red20);
+		put("21_e", R.drawable.red21);
+		put("22_e", R.drawable.red22);
+		put("23_e", R.drawable.red23);
+		
+		put("+_e", R.drawable.blank);
+		put("=_e", R.drawable.blank);
 		}
 	};
 }
