@@ -228,7 +228,7 @@ public class RobotManager extends Service {
 				
 				DataInfo info = findDataInfo(readData);
 				if (info != null) {
-					String s = info.getSound();
+					String s = info.getRandomSound(System.currentTimeMillis());
 					if (s != null) playMusic(s);
 					
 					short a = info.getAction();

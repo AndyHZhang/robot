@@ -5,6 +5,10 @@
     <Data>
         <Interrupt>0X1001</Interrupt>
         <Sound>/sdcard/qnqn/robotmanager/sound/01.mp3</Sound>
+        <Sound>/sdcard/qnqn/robotmanager/sound/02.mp3</Sound>
+        <Sound>/sdcard/qnqn/robotmanager/sound/03.mp3</Sound>
+        <Sound>/sdcard/qnqn/robotmanager/sound/04.mp3</Sound>
+        <Sound>/sdcard/qnqn/robotmanager/sound/05.mp3</Sound>
 		<Action>0X002A</Action>
     </Data>
     

@@ -1,13 +1,16 @@
 package com.robot.manager;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class DataInfo {
 	private short mInterrupt;
-	private String mSound;
+	private ArrayList<String> mSoundList;
 	private short mAction;
 	
-	public DataInfo(short interrupt, String sound, short action) {
+	public DataInfo(short interrupt, ArrayList<String> soundList, short action) {
 		mInterrupt = interrupt;
-		mSound = sound;
+		mSoundList = soundList;
 		mAction = action;
 	}
 	
@@ -15,8 +18,9 @@ public class DataInfo {
 		return mInterrupt;
 	}
 	
-	public String getSound() {
-		return mSound;
+	public String getRandomSound(long seed) {
+		Random r = new Random(seed);
+		return mSoundList.get(r.nextInt(mSoundList.size()));
 	}
 	
 	public short getAction() {

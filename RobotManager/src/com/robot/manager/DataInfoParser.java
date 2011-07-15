@@ -34,7 +34,7 @@ public class DataInfoParser {
 			NodeList items = root.getElementsByTagName(DATA);
 			for (int i = 0; i < items.getLength(); i++) {
 				short interrupt = 0;
-				String sound = null;
+				ArrayList<String> soundList = new ArrayList<String>();
 				short action = 0;
 				Node item = items.item(i);
 				NodeList properties = item.getChildNodes();
@@ -47,7 +47,8 @@ public class DataInfoParser {
 						str = str.replaceFirst("0x", "");
 						interrupt = Short.parseShort(str, 16);
 					} else if (name.equalsIgnoreCase(SOUND)) {
-						sound = property.getFirstChild().getNodeValue();
+						String sound = property.getFirstChild().getNodeValue();
+						soundList.add(sound);
 					} else if (name.equalsIgnoreCase(ACTION)) {
 						String str = property.getFirstChild().getNodeValue();
 						str = str.replaceFirst("0X", "");
@@ -55,7 +56,7 @@ public class DataInfoParser {
 						action = Short.parseShort(str, 16);
 					}
 				}
-				dataInfos.add(new DataInfo(interrupt, sound, action));
+				dataInfos.add(new DataInfo(interrupt, soundList, action));
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
